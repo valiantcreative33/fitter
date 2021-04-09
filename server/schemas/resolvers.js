@@ -1,26 +1,25 @@
-const { User, Thought } = require('../models');
+const { User, Story } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
 
-
 const resolvers = {
     Query: {
-        thoughts: async (parent, {username}) => {
+        stories: async (parent, {username}) => {
             const params = username ? { username } : {};
-            return Thought.find(params).sort({ createdAt: -1 });
+            return Story.find(params).sort({ createdAt: -1 });
         },
 
-        //get a thought by id
-        thought: async (parent, { _id }) => {
-            return Thought.findOne({ _id });
+        //get a story by id
+        story: async (parent, { _id }) => {
+            return Story.findOne({ _id });
         },
 
         me: async (parent, args, context) => { 
             if(context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
               .select('-__v -password')
-              .populate('thoughts')
+              .populate('stories')
               .populate('friends');
         
             return userData;
@@ -34,14 +33,14 @@ const resolvers = {
             return User.find()
             .select('-__v -password')
             .populate('friends')
-            .populate('thoughts');
+            .populate('stories');
         },
         // get a user by username
         user: async (parent, { username }) => {
             return User.findOne({ username })
             .select('-__v -password')
             .populate('friends')
-            .populate('thoughts');
+            .populate('stories');
         }
 
     },
@@ -70,31 +69,31 @@ const resolvers = {
             return { token, user };
           },
 
-          addThought: async (parent, args, context) => {
+          addStory: async (parent, args, context) => {
             if (context.user) {
-              const thought = await Thought.create({ ...args, username: context.user.username });
+              const story = await Story.create({ ...args, username: context.user.username });
           
               await User.findByIdAndUpdate(
                 { _id: context.user._id },
-                { $push: { thoughts: thought._id } },
+                { $push: { stories: story._id } },
                 { new: true }
               );
           
-              return thought;
+              return story;
             }
           
             throw new AuthenticationError('You need to be logged in!');
           },
 
-          addReaction: async (parent, { thoughtId, reactionBody }, context) => {
+          addReaction: async (parent, { storyId, reactionBody }, context) => {
             if (context.user) {
-              const updatedThought = await Thought.findOneAndUpdate(
-                { _id: thoughtId },
+              const updatedStory = await Story.findOneAndUpdate(
+                { _id: storyId },
                 { $push: { reactions: { reactionBody, username: context.user.username } } },
                 { new: true, runValidators: true }
               );
           
-              return updatedThought;
+              return updatedStory;
             }
           
             throw new AuthenticationError('You need to be logged in!');

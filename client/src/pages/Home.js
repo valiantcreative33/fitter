@@ -13,7 +13,7 @@ const Home = () => {
 
   // use useQuery hook to make query request
   const { loading, data } = useQuery(QUERY_STORIES);
-  //f data exists, store it in the thoughts constant we just created. If data is undefined, then save an empty array to the thoughts component.
+  //f data exists, store it in the stories constant we just created. If data is undefined, then save an empty array to the stories component.
 
   // use object destructuring to extract `data` from the `useQuery` Hook's response and rename it `userData` to be more descriptive
   const { data: userData } = useQuery(QUERY_ME_BASIC);
@@ -33,7 +33,7 @@ const Home = () => {
         {loading ? (
           <div>Loading...</div>
         ) : (
-          <StoryList stories={stories} title="Some Feed for Thought(s)..." />
+          <StoryList stories={stories} title="Check out these fitness stories" />
         )}
       </div>
       {loggedIn && userData ? (

@@ -1,10 +1,10 @@
 const faker = require('faker');
 
 const db = require('../config/connection');
-const { Thought, User } = require('../models');
+const { Story, User } = require('../models');
 
 db.once('open', async () => {
-  await Thought.deleteMany({});
+  await Story.deleteMany({});
   await User.deleteMany({});
 
   // create user data
@@ -35,22 +35,22 @@ db.once('open', async () => {
     await User.updateOne({ _id: userId }, { $addToSet: { friends: friendId } });
   }
 
-  // create thoughts
-  let createdThoughts = [];
+  // create stories
+  let createdStories = [];
   for (let i = 0; i < 100; i += 1) {
-    const thoughtText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
+    const storyText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
 
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
     const { username, _id: userId } = createdUsers.ops[randomUserIndex];
 
-    const createdThought = await Thought.create({ thoughtText, username });
+    const createdStory = await Story.create({ storyText, username });
 
     const updatedUser = await User.updateOne(
       { _id: userId },
-      { $push: { thoughts: createdThought._id } }
+      { $push: { stories: createdStory._id } }
     );
 
-    createdThoughts.push(createdThought);
+    createdStories.push(createdStory);
   }
 
   // create reactions
@@ -60,11 +60,11 @@ db.once('open', async () => {
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
     const { username } = createdUsers.ops[randomUserIndex];
 
-    const randomThoughtIndex = Math.floor(Math.random() * createdThoughts.length);
-    const { _id: thoughtId } = createdThoughts[randomThoughtIndex];
+    const randomStoryIndex = Math.floor(Math.random() * createdStories.length);
+    const { _id: storyId } = createdStories[randomStoryIndex];
 
-    await Thought.updateOne(
-      { _id: thoughtId },
+    await Story.updateOne(
+      { _id: storyId },
       { $push: { reactions: { reactionBody, username } } },
       { runValidators: true }
     );

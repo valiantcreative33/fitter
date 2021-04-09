@@ -24,7 +24,7 @@ const StoryList = ({ stories, title }) => {
               story on {story.createdAt}
             </p>
             <div className="card-body">
-              <Link to={`/thought/${story._id}`}>
+              <Link to={`/story/${story._id}`}>
                 <p>{story.storyText}</p>
                 <p className="mb-0">
                   Reactions: {story.reactionCount} || Click to{' '}

@@ -1,6 +1,6 @@
 :root {
-  --primary: #011110;
-  --secondary: #070ac4;
+  --primary: hsl(176, 89%, 4%);
+  --secondary: black;
   --tertiary: #b2c2c1;
   --quatrinary: #cadbda;
   --light: #e1f5f4;

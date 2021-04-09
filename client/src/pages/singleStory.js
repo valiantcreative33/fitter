@@ -28,7 +28,7 @@ const SingleStory = props => {
           <span style={{ fontWeight: 700 }} className="text-light">
             {story.username}
           </span>{' '}
-          thought on {story.createdAt}
+          story on {story.createdAt}
         </p>
         <div className="card-body">
           <p>{story.storyText}</p>
@@ -36,7 +36,7 @@ const SingleStory = props => {
       </div>
 
       {story.reactionCount > 0 && <ReactionList reactions={story.reactions} />}
-      {Auth.loggedIn() && <ReactionForm thoughtId={story._id} />}
+      {Auth.loggedIn() && <ReactionForm storyId={story._id} />}
 
     </div>
   );

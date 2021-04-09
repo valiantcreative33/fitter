@@ -19,7 +19,7 @@ const StoryForm = () => {
             console.error(e);
           }
       
-          // update me object's cache, appending new thought to the end of the array
+          
           const { me } = cache.readQuery({ query: QUERY_ME });
           cache.writeQuery({
             query: QUERY_ME,
@@ -43,7 +43,7 @@ const StoryForm = () => {
         event.preventDefault();
       
         try {
-          // add thought to database
+          // add story to database
           await addStory({
             variables: { storyText }
           });
@@ -64,7 +64,7 @@ const StoryForm = () => {
       </p>
       <form className="flex-row justify-center justify-space-between-md align-stretch" onSubmit={handleFormSubmit}>
       <textarea
-        placeholder="Here's a new thought..."
+        placeholder="Share your story"
         value={storyText}
         className="form-input col-12 col-md-9"
         onChange={handleChange}

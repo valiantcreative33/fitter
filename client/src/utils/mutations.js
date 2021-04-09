@@ -55,7 +55,7 @@ export const ADD_STORY = gql`
 
 export const ADD_REACTION = gql`
   mutation addReaction($storyId: ID!, $reactionBody: String!) {
-    addReaction(thoughtId: $storyId, reactionBody: $reactionBody) {
+    addReaction(storyId: $storyId, reactionBody: $reactionBody) {
       _id
       reactionCount
       reactions {
