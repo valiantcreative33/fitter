@@ -1,22 +1,100 @@
-// import gql from 'graphql-tag';
+import gql from 'graphql-tag';
 
-// const GET_ME = gql`
-//     {
-//         me {
-//             _id
-//             username
-//             email
-//             bookCount
-//             savedBooks {
-//                 bookId
-//                 authors
-//                 description
-//                 title
-//                 image
-//                 link
-//             }
-//         }
-//     }
-// `;
+export const QUERY_STORIES = gql`
+  query stories($username: String) {
+    stories(username: $username) {
+      _id
+      storyText
+      createdAt
+      username
+      reactionCount
+      reactions {
+        _id
+        createdAt
+        username
+        reactionBody
+      }
+    }
+  }
+`;
 
-// export default GET_ME;
+export const QUERY_STORY = gql`
+  query story($id: ID!) {
+    story(_id: $id) {
+      _id
+      storyText
+      createdAt
+      username
+      reactionCount
+      reactions {
+        _id
+        createdAt
+        username
+        reactionBody
+      }
+    }
+  }
+`;
+
+export const QUERY_USER = gql`
+  query user($username: String!) {
+    user(username: $username) {
+      _id
+      username
+      email
+      friendCount
+      friends {
+        _id
+        username
+      }
+      thoughts {
+        _id
+        storyText
+        createdAt
+        reactionCount
+      }
+    }
+  }
+`;
+
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+      email
+      friendCount
+      stories {
+        _id
+        storyText
+        createdAt
+        reactionCount
+        reactions {
+          _id
+          createdAt
+          reactionBody
+          username
+        }
+      }
+      friends {
+        _id
+        username
+      }
+    }
+  }
+`;
+
+export const QUERY_ME_BASIC = gql`
+  {
+    me {
+      _id
+      username
+      email
+      friendCount
+      friends {
+        _id
+        username
+      }
+    }
+  }
+`;
