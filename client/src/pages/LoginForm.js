@@ -38,12 +38,12 @@ const Login = (props) => {
   return (
     <main className='flex-row justify-center mb-4'>
       <div className='col-12 col-md-6'>
-        <div className='card'>
-          <h4 className='card-header'>Login</h4>
+        <div className='card m-3 p-3'>
+          <h4 className='card-header login'>Login</h4>
           <div className='card-body'>
             <form onSubmit={handleFormSubmit}>
               <input
-                className='form-input'
+                className='form-input login-text'
                 placeholder='Your email'
                 name='email'
                 type='email'
@@ -60,11 +60,11 @@ const Login = (props) => {
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button className='btn d-block w-100' type='submit'>
+              <button className='btn btn btn-outline-success btn-lg' type='submit'>
                 Submit
               </button>
             </form>
-            {error && <div>Login failed</div>}
+            {error && <div className="body-text m-2">Login failed</div>}
 
           </div>
         </div>

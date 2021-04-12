@@ -29,15 +29,15 @@ const Home = () => {
           <StoryForm />
         </div>
       )}
-      <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
+      <div className={`col-12 mb-3 p-3 body-text ${loggedIn && 'col-lg-8'}`} >
         {loading ? (
           <div>Loading...</div>
         ) : (
-          <StoryList stories={stories} title="Check out these fitness stories" />
+          <StoryList stories={stories} title="Check out these fitness stories"  />
         )}
       </div>
       {loggedIn && userData ? (
-          <div className="col-12 col-lg-3 mb-3">
+          <div className="col-12 col-lg-3 mb-4">
             <FriendList
               username={userData.me.username}
               friendCount={userData.me.friendCount}

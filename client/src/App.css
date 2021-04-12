@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,94 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Tajawal:wght@200;300&display=swap");
+
+
+.header-title {
+  font-size: 52px;
+  font-family: 'Baumans', cursive;
 }
+.header-title:hover {
+  color: rgba(0, 0, 0, 0.548);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  text-decoration-line: none;
+}
+
+.nav-items {
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.nav-link {
+  font-size: 28px;
+  font-family: 'Tajawal', sans-serif;
+}
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.164);
+  border-radius: 10px;
+}
+
+.body-text {
+  font-size: 22px;
+  font-family: 'Tajawal', sans-serif;
+}
+.body-title {
+  font-size: 28px;
+  font-family: 'Baumans', cursive;
+  font-weight: bold;
+}
+.login {
+  font-size: 32px;
+  font-family: 'Baumans', cursive;
+}
+.login-text {
+  font-size: 22px;
+  font-family: 'Tajawal', sans-serif;
+}
+.active {
+  background-color: rgba(255, 255, 255, 0.164);
+  border-radius: 10px;
+  color: black;
+}
+.active:hover {
+  background-color: rgba(255, 255, 255, 0.164);
+  border-radius: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.intro-text {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 24px;
+  background-color: #fbefcc63;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.btn:hover {
+  font-size: 20px;
+  background-color: #91c7885b;
+  color: grey;
+}
+
+.img-fluid {
+  background-color: #fbefcc63;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+
+.sub-title {
+  font-family: 'Baumans', cursive;
+  font-size: 28px;
+  background-color: #fbefcc79;
+  border-radius: 10px;
+  padding: 5px;
+  letter-spacing: 2.6px;
+}
+
+
+
+

@@ -12,6 +12,8 @@ import SingleStory from './pages/singleStory';
 import Profile from './pages/Profile';
 import Signup from './pages/SignupForm';
 
+import './App.css';
+
 const client = new ApolloClient({
   request: operation => {
     const token = localStorage.getItem('id_token');
