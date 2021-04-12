@@ -47,9 +47,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="m-3 p-3 body-text">
+    <div className="m-3 p-4 body-text body-card">
       <div className="flex-row mb-4">
-        <h2 className="sub-title p-3 mb-3 display-inline-block">
+        <h2 className="body-title p-3 mb-3 display-inline-block" style={{fontSize: '32px'}}>
           Viewing {userParam ? `${user.username}'s` : 'your'} profile..
         </h2>
 

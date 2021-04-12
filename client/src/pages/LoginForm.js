@@ -38,7 +38,7 @@ const Login = (props) => {
   return (
     <main className='flex-row justify-center mb-4'>
       <div className='col-12 col-md-6'>
-        <div className='card m-3 p-3'>
+        <div className='card m-3 p-3 body-card'>
           <h4 className='card-header login'>Login</h4>
           <div className='card-body'>
             <form onSubmit={handleFormSubmit}>

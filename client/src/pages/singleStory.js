@@ -22,7 +22,7 @@ const SingleStory = props => {
   }
 
   return (
-    <div className="m-4 p-2">
+    <div className="m-4 p-3 body-card">
       <div className="card mb-3">
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">

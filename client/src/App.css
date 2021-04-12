@@ -67,11 +67,15 @@
 .body-text {
   font-size: 22px;
   font-family: 'Tajawal', sans-serif;
+  text-decoration: none;
 }
 .body-title {
   font-size: 28px;
   font-family: 'Baumans', cursive;
   font-weight: bold;
+}
+.text-hover:hover {
+  color: #52734d;
 }
 .login {
   font-size: 32px;
@@ -80,17 +84,6 @@
 .login-text {
   font-size: 22px;
   font-family: 'Tajawal', sans-serif;
-}
-.active {
-  background-color: rgba(255, 255, 255, 0.164);
-  border-radius: 10px;
-  color: black;
-}
-.active:hover {
-  background-color: rgba(255, 255, 255, 0.164);
-  border-radius: 10px;
-  color: black;
-  text-decoration: none;
 }
 
 .intro-text {
@@ -113,16 +106,24 @@
   padding: 5px;
 }
 
-
-.sub-title {
-  font-family: 'Baumans', cursive;
-  font-size: 28px;
-  background-color: #fbefcc79;
+.small-card {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 22px;
+  font-weight: bolder;
   border-radius: 10px;
+  background-color: #fbefccc9;
   padding: 5px;
   letter-spacing: 2.6px;
 }
 
+.body-card {
+  background: #fbefcc69;
+}
+
+story-text {
+  color: black;
+  text-decoration: none;
+}
 
 
 

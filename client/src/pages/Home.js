@@ -23,21 +23,21 @@ const Home = () => {
 
   return (
     <main>
-      <div className="flex-row justify-space-between">
+      <div className="flex-row justify-space-between body-card m-3 p-4">
       {loggedIn && (
         <div className="col-12 mb-3">
           <StoryForm />
         </div>
       )}
-      <div className={`col-12 mb-3 p-3 body-text ${loggedIn && 'col-lg-8'}`} >
+      <div className={`col-12 mb-3 p-3 m-3 body-text ${loggedIn && 'col-lg-8'}`} >
         {loading ? (
-          <div>Loading...</div>
+          <div className="body-title">Loading...</div>
         ) : (
           <StoryList stories={stories} title="Check out these fitness stories"  />
         )}
       </div>
       {loggedIn && userData ? (
-          <div className="col-12 col-lg-3 mb-4">
+          <div className="col-12 col-lg-3 mb-4" >
             <FriendList
               username={userData.me.username}
               friendCount={userData.me.friendCount}

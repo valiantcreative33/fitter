@@ -44,7 +44,7 @@ const ReactionForm = ({ storyId }) => {
           onChange={handleChange}
         ></textarea>
         <div className="col-12">
-        <p className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}>
+        <p className={`m-0 body-text ${characterCount === 280 || error ? 'text-error' : ''}`}>
           Character Count: {characterCount}/280
           {error && <span className="ml-2">Something went wrong...</span>}
         </p>
