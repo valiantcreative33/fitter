@@ -7,6 +7,7 @@ import FriendList from '../components/FriendList';
 import Auth from '../utils/auth';
 import { ADD_FRIEND } from '../utils/mutations';
 import StoryForm from '../components/StoryForm';
+import Calendar from '../pages/Calendar'
 
 const Profile = () => {
   const [addFriend] = useMutation(ADD_FRIEND);
@@ -52,6 +53,7 @@ const Profile = () => {
         <h2 className="body-title p-3 mb-3 display-inline-block" style={{fontSize: '32px'}}>
           Viewing {userParam ? `${user.username}'s` : 'your'} profile..
         </h2>
+        <Calendar />
 
         {userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
