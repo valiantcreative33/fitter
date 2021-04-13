@@ -1,51 +1,18 @@
 import React from 'react';
-import { Redirect, useParams } from 'react-router-dom';
-import StoryList from '../components/StoryList';
-import { useQuery, useMutation } from '@apollo/react-hooks';
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
-import FriendList from '../components/FriendList';
-import Auth from '../utils/auth';
-import { ADD_FRIEND } from '../utils/mutations';
-import StoryForm from '../components/StoryForm';
-import Script from '../javascript\Script.js';
+// import { Redirect, useParams } from 'react-router-dom';
+// import StoryList from '../components/StoryList';
+// import { useQuery, useMutation } from '@apollo/react-hooks';
+// import { QUERY_USER, QUERY_ME } from '../utils/queries';
+// import FriendList from '../components/FriendList';
+// import Auth from '../utils/auth';
+// import { ADD_FRIEND } from '../utils/mutations';
+// import StoryForm from '../components/StoryForm';
+// import Script from '../javascript\Script.js';
 
 
 const Calendar = () => {
 
-    //dispaly current day at the top of the document
-var currentDate = moment().format("dddd, MMM Do YYYY, h:mm:ss a");
- document.querySelector("#currentDay").html(currentDate);
-
-windows.onload = (function(){
-    $(".saveBtn").on("click", function(){
-        
-        var task = document.body.siblings(".description").val();
-        var time = document.body.parent().attr("id");
-
-        //when user click save, info is saved into localStorage
-        localStorage.setItem(time, task); 
-    })
-    
-    //keep information after user refrshes page
-    //Retrieve time from the DOM
-    //Use that to retrieve the task from local storage
-    //Update task in the DOM
-
-    // $(".time-block").each(function(){
-
-    //     var task = $(this).children(".description").val();
-    //     var time = $(this).attr("id");
-
-    //     var retrieveTime = localStorage.getItem(time);
-
-    //     console.log('task',task);
-    //     console.log('time',time);
-
-    //     if(retrieveTime){
-    //         console.log('retrieve time', retrieveTime)   
-    //         time = $(this).children(".description").val(retrieveTime); 
-    //     }     
-    });
+  
 
 
     return (

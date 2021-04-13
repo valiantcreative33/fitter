@@ -23,6 +23,81 @@ const Home = () => {
 
   return (
     <main>
+       <div class="container">
+      
+
+ 
+
+  
+  <div id="hour-11" class="row time-block">
+    <div class="col-md-1 hour">
+      Sunday
+    </div>
+      <textarea class="col-md-10 text11">
+      </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+  </div>
+
+ 
+  <div id="hour-12" class="row time-block">
+    <div class="col-md-1 hour">
+      Monday
+    </div>
+      <textarea class="col-md-10 text12">
+      </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+  </div>
+
+  
+  <div id="hour-1" class="row time-block">
+    <div class="col-md-1 hour">
+      Tuesday
+    </div>
+      <textarea class="col-md-10 text1">
+      </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+  </div>
+
+
+  <div id="hour-2" class="row time-block">
+    <div class="col-md-1 hour">
+      Wednesday
+    </div>
+      <textarea class="col-md-10 text2">
+      </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+  </div>
+
+  
+  <div id="hour-3" class="row time-block">
+    <div class="col-md-1 hour">
+      Thursday
+    </div>
+      <textarea class="col-md-10 text3">
+      </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+  </div>
+  
+
+  <div id="hour-4" class="row time-block">
+    <div class="col-md-1 hour">
+      Friday
+    </div>
+      <textarea class="col-md-10 text4">
+      </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+  </div>
+
+ 
+  <div id="hour-5" class="row time-block">
+    <div class="col-md-1 hour">
+      Saturday
+    </div>
+      <textarea class="col-md-10 text5">
+      </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+  </div>
+</div>
       <div className="flex-row justify-space-between body-card m-3 p-4">
       {loggedIn && (
         <div className="col-12 mb-3">
