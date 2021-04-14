@@ -155,17 +155,3 @@ export default class Quiz extends Component {
         );
     }
 }
-
-// {step => 6 ? 
-//     (<>
-//         <input
-//         value={this.state.question}
-//         name="question1"
-//         onChange={this.handleInputChange}
-//         type="text"
-//         placeholder="this is your first question"
-//       />
-     
-//       <button className="nextQuestion story-button btn btn-outline-success btn-lg" onClick={this.handleFormSubmit}>next</button>
-      
-//     </>) :(

@@ -67,3 +67,14 @@ export const ADD_REACTION = gql`
     }
   }
 `;
+
+export const ADD_ACTIVITY = gql`
+  mutation addActivity( $weekday: String!, $activityName: String!) {
+    addActivity( weekday: $weekday, activityName: $activityName) {
+      _id
+      weekday
+      activityName
+      createdAt
+    }
+  }
+`;
