@@ -11,6 +11,7 @@ import NoMatch from './pages/NoMatch';
 import SingleStory from './pages/singleStory';
 import Profile from './pages/Profile';
 import Signup from './pages/SignupForm';
+import Quiz from './pages/Quiz';
 
 import './App.css';
 
@@ -40,6 +41,7 @@ function App() {
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile/:username?" component={Profile} />
             <Route exact path="/story/:id" component={SingleStory} />
+            <Route exact path="/quiz/" component={Quiz} />
 
             <Route component={NoMatch} />
           </Switch>

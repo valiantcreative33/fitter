@@ -13,12 +13,13 @@ const Header = () => {
   return (
       <nav className="navbar navbar-expand-lg navbar-light shadow-sm" style={{backgroundColor: "#91c788"}}>
       <Link className="header-title px-3 mx-3" to="/">Fitter</Link>
-      <div className="collapse navbar-collapse nav-items p-1 mx-2" id="navbarNavAltMarkup">
+      <div className="collapse navbar-collapse nav-items p-1 mx-2 " id="navbarNavAltMarkup">
           <div>
           {Auth.loggedIn() ? (
             <>
               <Link className="nav-link px-3 mx-3" to="/profile">me</Link>
               <a className="nav-link px-3 mx-3" href="/"  onClick={logout}>logout</a>
+              <Link className="nav-link px-3 mx-3" style={{color: 'black'}} to="/quiz">set up your health goals!</Link>
             </>
           ) : (
             <>
