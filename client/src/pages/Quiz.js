@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import Question from '../components/Question/index';
 import Answer from '../components/Answer/index';
 import '../Quiz.css'
@@ -147,6 +148,7 @@ export default class Quiz extends Component {
                 <div className="results">
                     <h1>You have completed your self assessment! Here are your results:</h1>
                     <p>display results here lol</p>
+                    <Link className="nav-link px-3 mx-3 back" to="/profile">back to my profile</Link>
                 </div>
             )}
             </div> 

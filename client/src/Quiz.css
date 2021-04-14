@@ -5,3 +5,6 @@
     margin: 0 auto;
 }
 
+.back:hover {
+    color: black;
+}
