@@ -19,7 +19,7 @@ const Header = () => {
             <>
               <Link className="nav-link px-3 mx-3" to="/profile">me</Link>
               <a className="nav-link px-3 mx-3" href="/"  onClick={logout}>logout</a>
-              <a className="nav-link px-3 mx-3" style={{color: "black"}} href="/quiz"  onClick={logout}>set up your health goals!</a>
+              <Link className="nav-link px-3 mx-3" style={{color: "black"}} to="/quiz" >set up your health goals!</Link>
             </>
           ) : (
             <>

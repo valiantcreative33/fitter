@@ -1,0 +1,10 @@
+.quiz {
+    width: 75%;
+    background-color: #fbefccc9;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+.back:hover {
+    color: black;
+}
