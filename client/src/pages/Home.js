@@ -1,12 +1,10 @@
-import React, {useState} from 'react';
-import { useQuery, useMutation } from '@apollo/react-hooks';
+import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
 import { QUERY_STORIES, QUERY_ME_BASIC } from '../utils/queries';
 import Auth from '../utils/auth';
 import FriendList from '../components/FriendList';
 import StoryForm from '../components/StoryForm';
 import StoryList from '../components/StoryList';
-import { ADD_ACTIVITY } from '../utils/mutations';
-
 
 
 
@@ -21,115 +19,10 @@ const Home = () => {
   const { data: userData } = useQuery(QUERY_ME_BASIC);
 
   const stories = data?.stories || [];
- 
-
-
-  const [addActivity, { error }] = useMutation(ADD_ACTIVITY)
-
-    const [weekday, setWeekday] = useState('');
-    const [activityName, setActivityName] = useState('');
-
-    const handleChange = (event, dow) => {
-      console.log(event.target.value);
-      setWeekday(dow);
-      setActivityName(event.target.value)
-    };
-
-    const handleClick = async event => {
-        event.preventDefault();
-
-        try {
-            // add reaction to database
-            await addActivity({
-                variables: { weekday, activityName }
-            });
-        
-            // clear form value 
-            setWeekday('');
-            setActivityName('');
-        } catch (e) {
-                console.error(e);
-        }
-       
-    };
+  console.log(stories)
 
   return (
     <main>
-       <div class="container">
-      
-
- 
-
-  
-  <div id="hour-11" class="row time-block">
-    <div class="col-md-1 hour">
-      Sunday
-    </div>
-      <textarea  onChange={(event) => handleChange(event, "Sunday")} class="col-md-10 text11">
-      </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-  </div>
-
- 
-  <div id="hour-12" class="row time-block">
-    <div class="col-md-1 hour">
-      Monday
-    </div>
-      <textarea class="col-md-10 text12">
-      </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-  </div>
-
-  
-  <div id="hour-1" class="row time-block">
-    <div class="col-md-1 hour">
-      Tuesday
-    </div>
-      <textarea class="col-md-10 text1">
-      </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-  </div>
-
-
-  <div id="hour-2" class="row time-block">
-    <div class="col-md-1 hour">
-      Wednesday
-    </div>
-      <textarea class="col-md-10 text2">
-      </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-  </div>
-
-  
-  <div id="hour-3" class="row time-block">
-    <div class="col-md-1 hour">
-      Thursday
-    </div>
-      <textarea class="col-md-10 text3">
-      </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-  </div>
-  
-
-  <div id="hour-4" class="row time-block">
-    <div class="col-md-1 hour">
-      Friday
-    </div>
-      <textarea class="col-md-10 text4">
-      </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-  </div>
-
- 
-  <div id="hour-5" class="row time-block">
-    <div class="col-md-1 hour">
-      Saturday
-    </div>
-      <textarea class="col-md-10 text5">
-      </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-  </div>
-</div>
       <div className="flex-row justify-space-between body-card m-3 p-4">
       {loggedIn && (
         <div className="col-12 mb-3">
