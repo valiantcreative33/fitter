@@ -1,10 +1,12 @@
-import React from 'react';
-import { useQuery } from '@apollo/react-hooks';
+import React, {useState} from 'react';
+import { useQuery, useMutation } from '@apollo/react-hooks';
 import { QUERY_STORIES, QUERY_ME_BASIC } from '../utils/queries';
 import Auth from '../utils/auth';
 import FriendList from '../components/FriendList';
 import StoryForm from '../components/StoryForm';
 import StoryList from '../components/StoryList';
+import { ADD_ACTIVITY } from '../utils/mutations';
+
 
 
 
@@ -19,7 +21,37 @@ const Home = () => {
   const { data: userData } = useQuery(QUERY_ME_BASIC);
 
   const stories = data?.stories || [];
-  console.log(stories)
+ 
+
+
+  const [addActivity, { error }] = useMutation(ADD_ACTIVITY)
+
+    const [weekday, setWeekday] = useState('');
+    const [activityName, setActivityName] = useState('');
+
+    const handleChange = (event, dow) => {
+      console.log(event.target.value);
+      setWeekday(dow);
+      setActivityName(event.target.value)
+    };
+
+    const handleClick = async event => {
+        event.preventDefault();
+
+        try {
+            // add reaction to database
+            await addActivity({
+                variables: { weekday, activityName }
+            });
+        
+            // clear form value 
+            setWeekday('');
+            setActivityName('');
+        } catch (e) {
+                console.error(e);
+        }
+       
+    };
 
   return (
     <main>
@@ -33,7 +65,7 @@ const Home = () => {
     <div class="col-md-1 hour">
       Sunday
     </div>
-      <textarea class="col-md-10 text11">
+      <textarea  onChange={(event) => handleChange(event, "Sunday")} class="col-md-10 text11">
       </textarea>
         <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
   </div>
