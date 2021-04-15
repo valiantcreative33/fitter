@@ -65,12 +65,12 @@ const Profile = () => {
 
        <div className="m-2 p-2 mb-5 col-5 border-bottom">
         <h3 className="calendar-title text-center"> Your Goals</h3>
-        <div className="calendar-input text-center">goals here!</div>
+        <div className="calendar-input text-center">Goals Here!</div>
        </div>
 
        </div>
 
-        <h3 className="calendar-title"> Your weekly calendar</h3>
+        <h3 className="calendar-title"> Your Weekly Calendar</h3>
   
       <div id="hour-11" className="row p-2 time-block">
         <div className="col-8 m-1 day">
@@ -99,74 +99,6 @@ const Profile = () => {
             <button onClick={(event)=>handleClick(event)} data-weekday="Tuesday" className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
       </div>
 
-<<<<<<< HEAD
-        <h3 className="calendar-title"> Your weekly calendar</h3>
-        <div className="row p-2">
-          <div className="col-8 m-1 day">
-            Sunday:
-          </div>
-            <textarea  onChange={(event) => handleChange(event, "Sunday")} className="col-10 calendar-input">
-            </textarea>
-              <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
-        </div>
-    
-        <div className="row p-2">
-          <div className="col-8 m-1 day">
-            Monday:
-          </div>
-            <textarea onChange={(event) => handleChange(event, "Monday")} className="col-10 calendar-input">
-            </textarea>
-              <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
-        </div>
-        
-        <div className="row p-2">
-          <div className="col-8 m-1 day">
-            Tuesday:
-          </div>
-            <textarea onChange={(event) => handleChange(event, "Tuesday")} className="col-10 calendar-input">
-            </textarea>
-              <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
-        </div>
-
-        <div className="row p-2">
-          <div className="col-8 m-1 day">
-            Wednesday:
-          </div>
-            <textarea onChange={(event) => handleChange(event, "Wednesday")} className="col-10 calendar-input">
-            </textarea>
-              <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
-        </div>
-        
-        <div className="row p-2">
-          <div className="col-8 m-1 day">
-            Thursday:
-          </div>
-            <textarea onChange={(event) => handleChange(event, "Thursday")} className="col-10 calendar-input">
-            </textarea>
-              <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
-        </div>
-        
-        <div className="row p-2">
-          <div className="col-8 m-1 day">
-            Friday:
-          </div>
-            <textarea onChange={(event) => handleChange(event, "Friday")} className="col-10 calendar-input">
-            </textarea>
-              <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
-        </div>
-      
-        <div className="row p-2">
-          <div className=" col-8 m-1 day">
-            Saturday:
-          </div>
-            <textarea onChange={(event) => handleChange(event, "Saturday")} className="col-10 calendar-input">
-            </textarea>
-              <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
-        </div>
-      </div>
-      
-  </main>
-=======
       <div id="hour-2" className="row p-2 time-block">
         <div className="col-8 m-1 day">
           Wednesday
@@ -207,7 +139,6 @@ const Profile = () => {
     </div>
       
     </main>
->>>>>>> 16bb55abc8fafc212f016cd28a9aec58fa3fe6b3
   );
 };
 export default Profile;
