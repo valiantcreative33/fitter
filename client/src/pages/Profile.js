@@ -67,53 +67,54 @@ const Profile = () => {
     <div className="col-md-1 hour">
       Monday
     </div>
-      <textarea className="col-md-10 text12">
+    <textarea id="textarea-Monday" onChange={(event) => handleChange(event, "Monday")} className="col-md-10 text11">
       </textarea>
-        <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
+        <button onClick={(event)=>handleClick(event)} data-weekday="Monday" className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
   </div>
   
   <div id="hour-1" className="row time-block">
     <div className="col-md-1 hour">
       Tuesday
     </div>
-      <textarea className="col-md-10 text1">
+    <textarea id="textarea-Tuesday" onChange={(event) => handleChange(event, "Tuesday")} className="col-md-10 text11">
       </textarea>
-        <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
+        <button onClick={(event)=>handleClick(event)} data-weekday="Tuesday" className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
   </div>
+
   <div id="hour-2" className="row time-block">
     <div className="col-md-1 hour">
       Wednesday
     </div>
-      <textarea className="col-md-10 text2">
+    <textarea id="textarea-Wednesday" onChange={(event) => handleChange(event, "Wednesday")} className="col-md-10 text11">
       </textarea>
-        <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
+        <button onClick={(event)=>handleClick(event)} data-weekday="Wednesday" className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
   </div>
   
   <div id="hour-3" className="row time-block">
     <div className="col-md-1 hour">
       Thursday
     </div>
-      <textarea className="col-md-10 text3">
+    <textarea id="textarea-Thursday" onChange={(event) => handleChange(event, "Thursday")} className="col-md-10 text11">
       </textarea>
-        <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
+        <button onClick={(event)=>handleClick(event)} data-weekday="Thursday" className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
   </div>
   
   <div id="hour-4" className="row time-block">
     <div className="col-md-1 hour">
       Friday
     </div>
-      <textarea className="col-md-10 text4">
+    <textarea id="textarea-Friday" onChange={(event) => handleChange(event, "Friday")} className="col-md-10 text11">
       </textarea>
-        <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
+        <button onClick={(event)=>handleClick(event)} data-weekday="Friday" className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
   </div>
  
   <div id="hour-5" className="row time-block">
     <div className="col-md-1 hour">
       Saturday
     </div>
-      <textarea className="col-md-10 text5">
+    <textarea id="textarea-Saturday" onChange={(event) => handleChange(event, "Saturday")} className="col-md-10 text11">
       </textarea>
-        <button className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
+        <button onClick={(event)=>handleClick(event)} data-weekday="Saturday" className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
   </div>
 
   <div>
