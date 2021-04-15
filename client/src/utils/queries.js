@@ -1,5 +1,4 @@
 import gql from 'graphql-tag';
-
 export const QUERY_STORIES = gql`
   query stories($username: String) {
     stories(username: $username) {
@@ -17,7 +16,6 @@ export const QUERY_STORIES = gql`
     }
   }
 `;
-
 export const QUERY_STORY = gql`
   query story($id: ID!) {
     story(_id: $id) {
@@ -35,7 +33,6 @@ export const QUERY_STORY = gql`
     }
   }
 `;
-
 export const QUERY_USER = gql`
   query user($username: String!) {
     user(username: $username) {
@@ -56,39 +53,37 @@ export const QUERY_USER = gql`
     }
   }
 `;
-
 export const QUERY_ME = gql`
-{
-  me {
-    _id
-    username
-    email
-    friendCount
-    stories {
-      _id
-      storyText
-      createdAt
-      reactionCount
-      reactions {
-        _id
-        createdAt
-        reactionBody
-        username
-      }
-    }
-    friends {
+  {
+    me {
       _id
       username
-    }
-    activities{
-      _id
-      weekday
-      activityName
+      email
+      friendCount
+      stories {
+        _id
+        storyText
+        createdAt
+        reactionCount
+        reactions {
+          _id
+          createdAt
+          reactionBody
+          username
+        }
+      }
+      friends {
+        _id
+        username
+      }
+      activities{
+        _id
+        weekday
+        activityName
+      }
     }
   }
-}
 `;
-
 export const QUERY_ME_BASIC = gql`
   {
     me {
@@ -103,7 +98,6 @@ export const QUERY_ME_BASIC = gql`
     }
   }
 `;
-
 export const QUERY_ACTIVITIES = gql`
   query activities($username: String) {
     activities(username: $username) {

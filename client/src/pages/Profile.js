@@ -6,7 +6,7 @@ import { QUERY_ME } from '../utils/queries';
 // import StoryForm from '../components/StoryForm';
 // import StoryList from '../components/StoryList';
 import { ADD_ACTIVITY } from '../utils/mutations';
-import '../Profile.css'
+// import '../Profile.css'
 
 
 const Profile = () => {
@@ -84,7 +84,7 @@ const Profile = () => {
                     calendar-input text11">
                     </input>
                     <button onClick={(event)=>handleClick(event)} data-weekday="Sunday" className="btn saveBtn col-md-1" type="submit"><i
-                            className="fas fa-save"></i></button>
+                            className="fas fa-save save-icon"></i></button>
                 </div>
 
 
