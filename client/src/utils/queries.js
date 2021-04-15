@@ -80,6 +80,11 @@ export const QUERY_ME = gql`
         _id
         username
       }
+      activities{
+        _id
+        weekday
+        activityName
+      }
     }
   }
 `;
@@ -95,6 +100,16 @@ export const QUERY_ME_BASIC = gql`
         _id
         username
       }
+    }
+  }
+`;
+
+export const QUERY_ACTIVITIES = gql`
+  query activities($username: String) {
+    activities(username: $username) {
+      _id
+      weekday
+      activityName
     }
   }
 `;
