@@ -65,12 +65,12 @@ const Profile = () => {
 
        <div className="m-2 p-2 mb-5 col-5 border-bottom">
         <h3 className="calendar-title text-center"> Your Goals</h3>
-        <div className="calendar-input text-center">goals here!</div>
+        <div className="calendar-input text-center">Goals Here!</div>
        </div>
 
        </div>
 
-        <h3 className="calendar-title"> Your weekly calendar</h3>
+        <h3 className="calendar-title"> Your Weekly Calendar</h3>
   
       <div id="hour-11" className="row p-2 time-block">
         <div className="col-8 m-1 day">

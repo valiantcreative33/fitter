@@ -12,19 +12,21 @@ const Header = () => {
 
   return (
       <nav className="navbar navbar-expand-lg navbar-light shadow-sm" style={{backgroundColor: "#91c788"}}>
-      <Link className="header-title px-3 mx-3" to="/">Fitter</Link>
+        <Link className="header-title px-3 mx-3" to="/">
+          <img src={require('../../../src/assets/logo.svg')} alt="FITTER" height="75px" />
+        </Link>
       <div className="collapse navbar-collapse nav-items p-1 mx-2" id="navbarNavAltMarkup">
           <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="nav-link px-3 mx-3" to="/profile">me</Link>
-              <a className="nav-link px-3 mx-3" href="/"  onClick={logout}>logout</a>
-              <Link className="nav-link px-3 mx-3" style={{color: "black"}} to="/quiz" >set up your health goals!</Link>
+              <Link className="nav-link px-3 mx-3" to="/profile">Profile</Link>
+              <a className="nav-link px-3 mx-3" href="/"  onClick={logout}>Logout</a>
+              <Link className="nav-link px-3 mx-3" style={{color: "black"}} to="/quiz" >Set up Your Health Goals!</Link>
             </>
           ) : (
             <>
-              <Link className="nav-link px-3 mx-3" to="/login">login</Link>
-              <Link className="nav-link px-3 mx-3" to="/signup">signup</Link>
+              <Link className="nav-link px-3 mx-3" to="/login">Login</Link>
+              <Link className="nav-link px-3 mx-3" to="/signup">Signup</Link>
             </>
           )}
           </div>
