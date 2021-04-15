@@ -2,7 +2,7 @@
     white-space: pre-line;
   }
 
-.fas {
+.fa-save {
     padding: 20px;
     font-size: 18px;
     text-align: center;
@@ -12,7 +12,7 @@
     color: white;
 }
 
-.fas:hover {
+.fa-save:hover {
     background-color: #52734d;
     text-decoration: none;
     color: #ddffbc;
