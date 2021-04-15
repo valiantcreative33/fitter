@@ -10,7 +10,7 @@ export default class Quiz extends Component {
     //quiz questions/answers
     state = {
         questions: {
-            1: 'What your main goal with Fitter?',
+            1: 'What is your main goal with Fitter?',
             2: 'What is your height?',
             3: 'How many times per week do you hope to work out?',
             4: 'What is your ideal calorie intake per day?',
