@@ -85,6 +85,10 @@
   height: 100%;
 } */
 
+.landingPg {
+  margin-left: -390px;
+  margin-right: -390px;
+}
 .body-text {
   font-size: 22px;
   font-family: 'Tajawal', sans-serif;
@@ -151,7 +155,7 @@ story-text {
 .new-line {
   white-space: pre-line;
 }
-/* 
+
 .save-icon {
   padding: 20px;
   font-size: 18px;
@@ -166,7 +170,7 @@ story-text {
   background-color: #52734d;
   text-decoration: none;
   color: #ddffbc;
-} */
+}
 
 .saveBtn:hover {
   background-color: unset !important;

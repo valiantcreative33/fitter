@@ -6,7 +6,7 @@ function Footer() {
             <div className="row m-4 p-5 shadow">
                 <div className="col-1"></div>
                 <div className="text-center col">
-                <p class="card-title">
+                <p className="card-title">
                         Made with 💪 
                         <a href="https://github.com/jconeff"> by Jessica Coneff</a> ,
                         <a href="https://github.com/Dmorrel7"> Dalton Morrel</a>,

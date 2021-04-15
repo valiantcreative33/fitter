@@ -141,7 +141,7 @@ export default class Quiz extends Component {
                  </>) : (
                 <div className="results">
                     <h1>You have completed your self assessment! Here are your results:</h1>
-                    <p className=" result-text p-2 m-1">display results here lol</p>
+                    <p className=" result-text p-2 m-1">display results here</p>
                     <Link className="nav-link back" to="/profile"><i class="fas fa-long-arrow-alt-left"></i> back to my profile</Link>
                 </div>
             )}

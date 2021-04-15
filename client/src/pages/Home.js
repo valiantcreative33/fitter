@@ -2,9 +2,12 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_STORIES, QUERY_ME_BASIC } from '../utils/queries';
 import Auth from '../utils/auth';
-import FriendList from '../components/FriendList';
+// import FriendList from '../components/FriendList';
 import StoryForm from '../components/StoryForm';
 import StoryList from '../components/StoryList';
+import LandingPage from '../components/LandingPage';
+import Header from '../components/Header';
+
 
 
 
@@ -22,7 +25,11 @@ const Home = () => {
   console.log(stories)
 
   return (
-    <main className="back-img">
+    <container>
+      <div className="landingPg">
+          <LandingPage />
+        </div>
+    <main>
       <div className="flex-row justify-space-between body-card m-3 p-4">
       {loggedIn && (
         <div className="col-12 mb-3">
@@ -47,6 +54,7 @@ const Home = () => {
         ) : null} */}
       </div>
     </main>
+    </container>
   );
 };
 

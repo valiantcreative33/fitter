@@ -33,11 +33,11 @@ const Profile = () => {
 
     const handleClick = async event => {
 
+      event.preventDefault();
       console.log("addActivity");
       let weekday = event.target.getAttribute("data-weekday");
       let activityName = document.getElementById("textarea-" + weekday).value;
       console.log(activityName);
-        event.preventDefault();
         try {
             // add reaction to database
             await addActivity({
@@ -84,7 +84,7 @@ const Profile = () => {
                     calendar-input text11">
                     </input>
                     <button onClick={(event)=>handleClick(event)} data-weekday="Sunday" className="btn saveBtn col-md-1" type="submit"><i
-                            className="fas fa-save save-icon"></i></button>
+                            className="fas fa-save save-icon" data-weekday="Sunday"></i></button>
                 </div>
 
 
@@ -95,7 +95,7 @@ const Profile = () => {
                     <input id="textarea-Monday" onChange={(event)=> handleChange(event, "Monday")} className="col-10 calendar-input text11">
                     </input>
                     <button onClick={(event)=>handleClick(event)} data-weekday="Monday" className="btn saveBtn col-md-1"><i
-                            className="fas fa-save"></i></button>
+                            className="fas fa-save save-icon" data-weekday="Monday"></i></button>
                 </div>
 
                 <div id="hour-1" className="row p-2 time-block">
@@ -105,7 +105,7 @@ const Profile = () => {
                     <input id="textarea-Tuesday" onChange={(event)=> handleChange(event, "Tuesday")} className="col-10 calendar-input text11">
                     </input>
                     <button onClick={(event)=>handleClick(event)} data-weekday="Tuesday" className="btn saveBtn col-md-1"><i
-                            className="fas fa-save"></i></button>
+                            className="fas fa-save save-icon" data-weekday="Tuesday"></i></button>
                 </div>
 
                 <div id="hour-2" className="row p-2 time-block">
@@ -114,8 +114,7 @@ const Profile = () => {
                     </div>
                     <input id="textarea-Wednesday" onChange={(event)=> handleChange(event, "Wednesday")} className="col-10 calendar-input text11">
                     </input>
-                    <button onClick={(event)=>handleClick(event)} data-weekday="Wednesday" className="btn saveBtn
-                        col-md-1"><i className="fas fa-save"></i></button>
+                    <button onClick={(event)=>handleClick(event)} data-weekday="Wednesday" className="btn saveBtn col-md-1"><i className="fas fa-save save-icon" data-weekday="Wednesday"></i></button>
                 </div>
 
                 <div id="hour-3" className="row p-2 time-block">
@@ -125,7 +124,7 @@ const Profile = () => {
                     <input id="textarea-Thursday" onChange={(event)=> handleChange(event, "Thursday")} className="col-10 calendar-input text11">
                     </input>
                     <button onClick={(event)=>handleClick(event)} data-weekday="Thursday" className="btn saveBtn
-                        col-md-1"><i className="fas fa-save"></i></button>
+                        col-md-1"><i className="fas fa-save save-icon" data-weekday="Thursday"></i></button>
                 </div>
 
                 <div id="hour-4" className="row p-2 time-block">
@@ -135,7 +134,7 @@ const Profile = () => {
                     <input id="textarea-Friday" onChange={(event)=> handleChange(event, "Friday")} className="col-10 calendar-input text11">
                     </input>
                     <button onClick={(event)=>handleClick(event)} data-weekday="Friday" className="btn saveBtn col-md-1"><i
-                            className="fas fa-save"></i></button>
+                            className="fas fa-save save-icon"  data-weekday="Friday"></i></button>
                 </div>
 
                 <div id="hour-5" className="row p-2 time-block">
@@ -145,7 +144,7 @@ const Profile = () => {
                     <input id="textarea-Saturday" onChange={(event)=> handleChange(event, "Saturday")} className="col-10 calendar-input text11">
                     </input>
                     <button onClick={(event)=>handleClick(event)} data-weekday="Saturday" className="btn saveBtn
-                        col-md-1"><i className="fas fa-save"></i></button>
+                        col-md-1"><i className="fas fa-save save-icon" data-weekday="Saturday"></i></button>
                 </div>
 
             </form>
