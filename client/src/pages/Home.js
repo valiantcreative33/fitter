@@ -22,7 +22,7 @@ const Home = () => {
   console.log(stories)
 
   return (
-    <main>
+    <main className="back-img">
       <div className="flex-row justify-space-between body-card m-3 p-4">
       {loggedIn && (
         <div className="col-12 mb-3">

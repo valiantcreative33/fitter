@@ -1,10 +1,34 @@
 .quiz {
     width: 75%;
-    background-color: #fbefccc9;
+    background-color: #91c7885b;
     padding: 50px 20px;
     margin: 0 auto;
 }
 
+.back {
+    font-size: 22px;
+}
 .back:hover {
     color: black;
+    background-color: #fdefc4;
+}
+
+.result-text {
+    font-size: 22px;
+    font-family: 'Tajawal', sans-serif;
+    text-decoration: none;
+}
+
+.fa-long-arrow-alt-left {
+    padding: 10px;
+    font-size: 26px;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    color: #52734d;
+}
+
+.fa-long-arrow-alt-left:hover {
+    text-decoration: none;
+
 }

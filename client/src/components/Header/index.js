@@ -19,14 +19,14 @@ const Header = () => {
           <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="nav-link px-3 mx-3" to="/profile">Profile</Link>
-                <a className="nav-link px-3 mx-3" href="/"  onClick={logout}>Logout</a>
-              <Link className="nav-link px-3 mx-3" style={{color: "black"}} to="/quiz" >Set up Your Health Goals!</Link>
+              <Link className=" nLink nav-link px-3 mx-3" to="/profile">Profile</Link>
+              <a className="nLink nav-link px-3 mx-3" href="/"  onClick={logout}>Logout</a>
+              <Link className="nLink nav-link px-3 mx-3" style={{color: "black"}} to="/quiz" >Set up Your Health Goals!</Link>
             </>
           ) : (
             <>
-              <Link className="nav-link px-3 mx-3" to="/login">Login</Link>
-              <Link className="nav-link px-3 mx-3" to="/signup">Signup</Link>
+              <Link className="nLink nav-link px-3 mx-3" to="/login">Login</Link>
+              <Link className="nLink nav-link px-3 mx-3" to="/signup">Signup</Link>
             </>
           )}
           </div>
