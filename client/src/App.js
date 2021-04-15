@@ -4,6 +4,7 @@ import ApolloClient from 'apollo-boost';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header';
+import LandingPage from './components/LandingPage';
 // import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/LoginForm';
@@ -11,6 +12,7 @@ import NoMatch from './pages/NoMatch';
 import SingleStory from './pages/singleStory';
 import Profile from './pages/Profile';
 import Signup from './pages/SignupForm';
+import Footer from './components/Footer';
 
 
 import './App.css';
@@ -35,6 +37,7 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
+          <LandingPage />
           <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
@@ -43,12 +46,10 @@ function App() {
             <Route exact path="/profile/:username?" component={Profile} />
             <Route exact path="/story/:id" component={SingleStory} />
             <Route exact path="/quiz/" component={Quiz} />
-
-
             <Route component={NoMatch} />
           </Switch>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>

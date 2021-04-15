@@ -37,18 +37,35 @@
   }
 } */
 
-@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Tajawal:wght@200;300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+<<<<<<< HEAD
+=======
+
+/* .navbar {
+  background-image: url("../src/assets/landing-page-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  height: 280px;
+ } */
+>>>>>>> develop
 
 .header-title {
   font-size: 52px;
-  font-family: 'Baumans', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 .header-title:hover {
   color: rgba(0, 0, 0, 0.548);
   background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
   text-decoration-line: none;
+}
+.nLink {
+  font-weight:bold;
+  color: black !important;
+  font-size: 23px !important;
+  text-align:right;
 }
 
 .nav-items {
@@ -64,6 +81,13 @@
   border-radius: 10px;
 }
 
+/* .landing-page {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+} */
+
 .body-text {
   font-size: 22px;
   font-family: 'Tajawal', sans-serif;
@@ -71,7 +95,7 @@
 }
 .body-title {
   font-size: 28px;
-  font-family: 'Baumans', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
 .text-hover:hover {
@@ -79,7 +103,7 @@
 }
 .login {
   font-size: 32px;
-  font-family: 'Baumans', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 .login-text {
   font-size: 22px;
@@ -117,7 +141,7 @@
 }
 
 .body-card {
-  background: #fbefcc69;
+  background: #91c7885b;
 }
 
 story-text {
@@ -125,6 +149,50 @@ story-text {
   text-decoration: none;
 }
 
+/* profile css */
 
+.new-line {
+  white-space: pre-line;
+}
+/* 
+.save-icon {
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20%;
+  background: #91c788;
+  color: white;
+}
 
+.save-icon:hover {
+  background-color: #52734d;
+  text-decoration: none;
+  color: #ddffbc;
+} */
 
+.saveBtn:hover {
+  background-color: unset !important;
+  color: unset !important;
+}
+
+.calendar-input {
+  font-size: 20px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.day {
+  font-size: 22px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.calendar-title {
+  font-size: 42px;
+  font-family: 'Baumans', cursive;
+}
+
+.footer {
+  color: #91c788;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 32px;
+}

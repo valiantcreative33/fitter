@@ -57,7 +57,7 @@ const StoryForm = () => {
     };
 
   return (
-    <div>
+    <div >
       <form className="row flex-row justify-center justify-space-between-md align-stretch m-3 p-3" onSubmit={handleFormSubmit}>
       <textarea
         placeholder="Share your story"
