@@ -58,30 +58,35 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_ME = gql`
-  {
-    me {
+{
+  me {
+    _id
+    username
+    email
+    friendCount
+    stories {
       _id
-      username
-      email
-      friendCount
-      stories {
+      storyText
+      createdAt
+      reactionCount
+      reactions {
         _id
-        storyText
         createdAt
-        reactionCount
-        reactions {
-          _id
-          createdAt
-          reactionBody
-          username
-        }
-      }
-      friends {
-        _id
+        reactionBody
         username
       }
     }
+    friends {
+      _id
+      username
+    }
+    activities{
+      _id
+      weekday
+      activityName
+    }
   }
+}
 `;
 
 export const QUERY_ME_BASIC = gql`
@@ -95,6 +100,16 @@ export const QUERY_ME_BASIC = gql`
         _id
         username
       }
+    }
+  }
+`;
+
+export const QUERY_ACTIVITIES = gql`
+  query activities($username: String) {
+    activities(username: $username) {
+      _id
+      weekday
+      activityName
     }
   }
 `;
