@@ -10,6 +10,7 @@ const typeDefs = gql`
         friendCount: Int
         stories: [Story]
         friends: [User]
+        activities: [Activity]
     }
 
     type Story {
@@ -28,12 +29,19 @@ const typeDefs = gql`
     username: String
     }
 
+    type Activity{
+        _id: ID
+        weekday: String
+        activityName: String
+        createdAt: String
+    }
+
     type Auth {
         token: ID!
         user: User
     }
 
-    type Query {\
+    type Query {
         me: User
         users: [User]
         user(username: String!): User
@@ -47,6 +55,7 @@ const typeDefs = gql`
         addStory(storyText: String!): Story
         addReaction(storyId: ID!, reactionBody: String!): Story
         addFriend(friendId: ID!): User
+        addActivity( weekday: String!, activityName: String!): Activity
     }
     
 `;

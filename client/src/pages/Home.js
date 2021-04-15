@@ -36,7 +36,7 @@ const Home = () => {
           <StoryList stories={stories} title="Check out these fitness stories"  />
         )}
       </div>
-      {loggedIn && userData ? (
+      {/* {loggedIn && userData ? (
           <div className="col-12 col-lg-3 mb-4" >
             <FriendList
               username={userData.me.username}
@@ -44,7 +44,7 @@ const Home = () => {
               friends={userData.me.friends}
             />
           </div>
-        ) : null}
+        ) : null} */}
       </div>
     </main>
   );

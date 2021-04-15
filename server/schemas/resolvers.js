@@ -111,6 +111,20 @@ const resolvers = {
             }
           
             throw new AuthenticationError('You need to be logged in!');
+          },
+
+          addActivity: async (parent, { activityId, weekday, activityName }, context) => {
+            if (context.user) {
+              const updatedUser = await User.findOneAndUpdate(
+                { _id: context.user._id },
+                { $addToSet: { activities: {activityId, weekday, activityName} } },
+                { new: true }
+              ).populate('activities');
+          
+              return updatedUser;
+            }
+          
+            throw new AuthenticationError('You need to be logged in!');
           }
     }
 };

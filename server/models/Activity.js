@@ -1,14 +1,14 @@
 const { Schema } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const reactionSchema = new Schema(
+const activitySchema = new Schema(
   {
-    reactionBody: {
+    weekday: {
       type: String,
       required: true,
-      maxlength: 280
+      maxlength: 9
     },
-    username: {
+    activityName: {
       type: String,
       required: true
     },
@@ -25,4 +25,6 @@ const reactionSchema = new Schema(
   }
 );
 
-module.exports = reactionSchema;
+
+
+module.exports = activitySchema;
