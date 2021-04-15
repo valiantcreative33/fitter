@@ -50,6 +50,17 @@ const Profile = () => {
     };
   return (
     <main>
+
+<div>
+      <h3 className="body-text" style={{color: 'black', fontSize: '26px', fontWeight: 'bold'}}>Activities</h3>
+      {activities &&
+        activities.map(activity => (
+          <div key={activity._id} className="col-md-10 text4">
+            <div>{activity?.weekday}</div>
+            <div>{activity?.activityName}</div>
+          </div>
+        ))}
+    </div>
        <div className="container">
       
  
@@ -117,16 +128,7 @@ const Profile = () => {
         <button onClick={(event)=>handleClick(event)} data-weekday="Saturday" className="btn saveBtn col-md-1"><i className="fas fa-save"></i></button>
   </div>
 
-  <div>
-      <h3 className="body-text" style={{color: 'black', fontSize: '26px', fontWeight: 'bold'}}>Activities</h3>
-      {activities &&
-        activities.map(activity => (
-          <div key={activity._id} className="col-md-10 text4">
-            <div>{activity?.weekday}</div>
-            <div>{activity?.activityName}</div>
-          </div>
-        ))}
-    </div>
+ 
 </div>
       
     </main>
