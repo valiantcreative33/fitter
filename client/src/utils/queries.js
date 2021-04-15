@@ -75,6 +75,11 @@ export const QUERY_ME = gql`
         reactionBody
         username
       }
+      activities{
+        _id
+        weekday
+        activityName
+      }
     }
     friends {
       _id
