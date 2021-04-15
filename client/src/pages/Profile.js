@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { QUERY_ACTIVITIES, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
-import FriendList from '../components/FriendList';
-import StoryForm from '../components/StoryForm';
-import StoryList from '../components/StoryList';
+// import FriendList from '../components/FriendList';
+// import StoryForm from '../components/StoryForm';
+// import StoryList from '../components/StoryList';
 import { ADD_ACTIVITY } from '../utils/mutations';
 import '../Profile.css'
 
@@ -47,7 +47,6 @@ const Profile = () => {
         } catch (e) {
                 console.error(e);
         }
-       
     };
   return (
     <main className="body-card m-1 pb-1">
