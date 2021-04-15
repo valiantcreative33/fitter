@@ -20,7 +20,7 @@ const Header = () => {
           {Auth.loggedIn() ? (
             <>
               <Link className="nav-link px-3 mx-3" to="/profile">Profile</Link>
-              <a className="nav-link px-3 mx-3" href="/"  onClick={logout}>Logout</a>
+                <a className="nav-link px-3 mx-3" href="/"  onClick={logout}>Logout</a>
               <Link className="nav-link px-3 mx-3" style={{color: "black"}} to="/quiz" >Set up Your Health Goals!</Link>
             </>
           ) : (
