@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import Auth from '../../utils/auth';
-// import LandingPage from '../LandingPage';
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+} from './HeaderElements';
 
 const Header = () => {
 
@@ -12,27 +17,30 @@ const Header = () => {
   };
 
   return (
-      <nav className="navbar navbar-expand-lg navbar-light shadow-sm" style={{backgroundColor: "#91c788"}}>
-        <Link className="header-title px-3 mx-3" to="/">
+    <>
+      <Nav>
+        <NavLink to="/" style={{backgroundColor: "#91c788"}}>
           <img src={require('../../../src/assets/logo.svg')} alt="FITTER" height="75px" />
-        </Link>
-      <div className="collapse navbar-collapse nav-items p-1 mx-2" id="navbarNavAltMarkup">
-          <div>
-          {Auth.loggedIn() ? (
-            <>
-              <Link className=" nLink nav-link px-3 mx-3" to="/profile">Profile</Link>
-              <a className="nLink nav-link px-3 mx-3" href="/"  onClick={logout}>Logout</a>
-              <Link className="nLink nav-link px-3 mx-3" style={{color: "black"}} to="/quiz" >Set up Your Health Goals!</Link>
-            </>
-          ) : (
-            <>
-              <Link className="nLink nav-link px-3 mx-3" to="/login">Login</Link>
-              <Link className="nLink nav-link px-3 mx-3" to="/signup">Signup</Link>
-            </>
-          )}
-          </div>
-      </div>
-      </nav>     
+        </NavLink>
+        <Bars />
+          <NavMenu>
+              <div>
+                {Auth.loggedIn() ? (
+                  <>
+                    <NavLink to="/profile" activeStyle>Profile</NavLink>
+                      <a href="/"  onClick={logout} activeStyle>Logout</a>
+                    <NavLink to="/quiz" activeStyle>Set up Your Health Goals!</NavLink>
+                  </>
+                ) : (
+                  <>
+                    <NavLink to="/login" activeStyle>Login</NavLink>
+                    <NavLink to="/signup" activeStyle>Signup</NavLink>
+                  </>
+                )}
+              </div>
+          </NavMenu>
+      </Nav>
+    </>
   );
 };
 
