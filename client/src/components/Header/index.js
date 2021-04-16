@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
+// import LandingPage from '../LandingPage';
 
 const Header = () => {
 
@@ -31,7 +32,7 @@ const Header = () => {
           )}
           </div>
       </div>
-      </nav>
+      </nav>     
   );
 };
 

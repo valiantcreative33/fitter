@@ -6,10 +6,7 @@ import Auth from '../utils/auth';
 import StoryForm from '../components/StoryForm';
 import StoryList from '../components/StoryList';
 import LandingPage from '../components/LandingPage';
-import Header from '../components/Header';
-
-
-
+// import Header from '../components/Header';
 
 const Home = () => {
   const loggedIn = Auth.loggedIn();
@@ -26,34 +23,32 @@ const Home = () => {
 
   return (
     <container>
-      <div className="landingPg">
+        <div>
           <LandingPage />
         </div>
-    <main>
-      <div className="flex-row justify-space-between body-card m-3 p-4">
-      {loggedIn && (
-        <div className="col-12 mb-3">
-          <StoryForm />
-        </div>
-      )}
-      <div className={`col-12 mb-3 p-3 m-3 body-text ${loggedIn && 'col-lg-8'}`} >
-        {loading ? (
-          <div className="body-title">Loading...</div>
-        ) : (
-          <StoryList stories={stories} title="Check out these fitness stories"  />
-        )}
-      </div>
-      {/* {loggedIn && userData ? (
-          <div className="col-12 col-lg-3 mb-4" >
-            <FriendList
-              username={userData.me.username}
-              friendCount={userData.me.friendCount}
-              friends={userData.me.friends}
-            />
+        <div className="flex-column justify-space-between body-card m-4 p-4">
+        {loggedIn && (
+          <div className="col-12 mb-3">
+            <StoryForm />
           </div>
-        ) : null} */}
-      </div>
-    </main>
+        )}
+        <div className={`col-12 mb-3 p-2 m-5 body-text ${loggedIn && 'col-lg-8'}`} >
+          {loading ? (
+            <div className="body-title">Loading...</div>
+          ) : (
+            <StoryList stories={stories} title="Check out these fitness stories"  />
+          )}
+        </div>
+        {/* {loggedIn && userData ? (
+            <div className="col-12 col-lg-3 mb-4" >
+              <FriendList
+                username={userData.me.username}
+                friendCount={userData.me.friendCount}
+                friends={userData.me.friends}
+              />
+            </div>
+          ) : null} */}
+        </div>
     </container>
   );
 };

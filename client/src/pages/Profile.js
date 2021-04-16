@@ -53,7 +53,7 @@ const Profile = () => {
     };
   return (
 
-    <main className="body-card m-1 pb-1">
+    <main className="body-card m-4 pb-1">
         <div className="container mt-5 m-4">
             <div className="row">
 

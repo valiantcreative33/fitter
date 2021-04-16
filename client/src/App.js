@@ -16,6 +16,7 @@ import Footer from './components/Footer';
 
 import './App.css';
 import Quiz from './pages/Quiz';
+import LandingPage from './components/LandingPage';
 
 const client = new ApolloClient({
   request: operation => {
@@ -34,11 +35,12 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div>
           <Header />
-          <div className="container">
+          <div>
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/header" component={Header} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile/:username?" component={Profile} />

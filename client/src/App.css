@@ -78,17 +78,18 @@
   border-radius: 10px;
 }
 
-/* .landing-page {
+.landing-page {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-} */
+  width: 100%;
+}
 
-.landingPg {
+/* .landingPg {
   margin-left: -390px;
   margin-right: -390px;
-}
+} */
+
 .body-text {
   font-size: 22px;
   font-family: 'Tajawal', sans-serif;
@@ -128,7 +129,7 @@
 .img-fluid {
   background-color: #fbefcc63;
   border-radius: 25px;
-  padding: 5px;
+  width: 100%;
 }
 
 .small-card {
@@ -189,7 +190,7 @@ story-text {
 
 .calendar-title {
   font-size: 42px;
-  font-family: 'Baumans', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footer {
