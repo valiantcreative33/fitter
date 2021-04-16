@@ -71,7 +71,7 @@ const StoryForm = () => {
         {error && <span className="ml-2">Something went wrong...</span>}
         </p>
         </div>
-        <button className="story-button btn btn-outline-success btn-lg col-2" type="submit">
+        <button className="story-button btn btn-outline-success btn-xxl btn-lg col-auto m-1" type="submit">
           Submit
         </button>
       </form>

@@ -119,6 +119,7 @@ nav a:hover {
   outline: none;
   background-color: var(--secondary);
   transition: all 0.5s;
+  max-width: 100%;
 }
 
 .btn:hover,
@@ -850,7 +851,8 @@ nav a:hover {
 }
 
 .col-2 {
-  flex: 0 0 calc(100% * 2 / 12 - 0.5%);
+  flex: 0 0 calc(100%);
+  width: 100%;
 }
 
 .col-3 {
