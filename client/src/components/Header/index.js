@@ -27,14 +27,14 @@ const Header = () => {
               <div>
                 {Auth.loggedIn() ? (
                   <>
-                    <NavLink to="/profile" activeStyle>Profile</NavLink>
-                      <a href="/"  onClick={logout} activeStyle>Logout</a>
-                    <NavLink to="/quiz" activeStyle>Set up Your Health Goals!</NavLink>
+                    <NavLink className="nav-link" to="/profile" activeStyle>Profile</NavLink>
+                      <a className="nav-link" href="/"  onClick={logout} activeStyle>Logout</a>
+                    <NavLink className="nav-link" to="/quiz" activeStyle>Set up Your Health Goals!</NavLink>
                   </>
                 ) : (
                   <>
-                    <NavLink to="/login" activeStyle>Login</NavLink>
-                    <NavLink to="/signup" activeStyle>Signup</NavLink>
+                    <NavLink className="nav-link" to="/login" activeStyle>Login</NavLink>
+                    <NavLink className="nav-link" to="/signup" activeStyle>Signup</NavLink>
                   </>
                 )}
               </div>

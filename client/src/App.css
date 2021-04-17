@@ -70,11 +70,11 @@
   flex-direction: row;
 }
 .nav-link {
-  font-size: 28px;
-  font-family: 'Tajawal', sans-serif;
+  font-size: 21px;
+  /* font-family: 'Tajawal', sans-serif; */
 }
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.164);
+  background-color: rgba(255, 255, 255, 0.164) ;
   border-radius: 10px;
 }
 
@@ -84,11 +84,6 @@
   background-size: cover;
   width: 100%;
 }
-
-/* .landingPg {
-  margin-left: -390px;
-  margin-right: -390px;
-} */
 
 .body-text {
   font-size: 22px;

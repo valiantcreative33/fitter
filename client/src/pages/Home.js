@@ -32,7 +32,7 @@ const Home = () => {
             <StoryForm />
           </div>
         )}
-        <div className={`col-12 mb-3 p-2 m-5 body-text ${loggedIn && 'col-lg-8'}`} >
+        <div className={`col-10 mb-3 p-2 m-5 body-text ${loggedIn && 'col-lg-8'}`} >
           {loading ? (
             <div className="body-title">Loading...</div>
           ) : (

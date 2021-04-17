@@ -47,10 +47,12 @@ const Profile = () => {
             // clear form value 
             setWeekday(weekday);
             setActivityName('');
+            window.location.reload(false);
         } catch (e) {
                 console.error(e);
         }
     };
+
   return (
 
     <main className="body-card m-4 pb-1">
