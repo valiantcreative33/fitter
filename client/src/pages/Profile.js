@@ -1,24 +1,13 @@
 import React, {useState} from 'react';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries';
-// import Auth from '../utils/auth';
-// import FriendList from '../components/FriendList';
-// import StoryForm from '../components/StoryForm';
-// import StoryList from '../components/StoryList';
 import { ADD_ACTIVITY } from '../utils/mutations';
-// import '../Profile.css'
+import '../Profile.css'
 
 
 const Profile = () => {
-  // const loggedIn = Auth.loggedIn();
-  // use useQuery hook to make query request
-  // const { loading, data } = useQuery(QUERY_ACTIVITIES);
-  //f data exists, store it in the stories constant we just created. If data is undefined, then save an empty array to the stories component.
-  // use object destructuring to extract `data` from the `useQuery` Hook's response and rename it `userData` to be more descriptive
   const { data: userData } = useQuery(QUERY_ME);
-  const activities = userData?.me?.activities || [];//data?.activities || [];
-  // const activities = [];
-  // console.log(userData?.me?.activities);
+  const activities = userData?.me?.activities || [];
  
     const [addActivity] = useMutation(ADD_ACTIVITY)
 
@@ -59,7 +48,7 @@ const Profile = () => {
         <div className="container mt-5 m-4">
             <div className="row">
 
-                <div className="m-2 p-2 mb-5 col-5 border-bottom">
+                <div className="m-2 p-2 mb-5 col-5 border-bottom border-success">
                     <h3 className="calendar-title text-center"> Your Activities</h3>
                     {activities &&
                     activities.map(activity => (
@@ -69,7 +58,7 @@ const Profile = () => {
                     ))}
                 </div>
 
-                <div className="m-2 p-2 mb-5 col-5 border-bottom">
+                <div className="m-2 p-2 mb-5 col-5 border-bottom border-success">
                     <h3 className="calendar-title text-center"> Your Goals</h3>
                     <div className="calendar-input text-center">Goals Here!</div>
                 </div>

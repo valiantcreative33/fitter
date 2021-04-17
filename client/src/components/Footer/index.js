@@ -7,12 +7,12 @@ function Footer() {
                 <div className="col-1"></div>
                 <div className="text-center col">
                 <p className="card-title">
-                        Made with   
+                        Made with    
                         <span
                         role="img"
                         aria-label="workout"
-                        >
-                         💪
+                        > 
+                          💪
                         </span>
                         <a href="https://github.com/jconeff"> by Jessica Coneff</a> ,
                         <a href="https://github.com/Dmorrel7"> Dalton Morrel</a>,

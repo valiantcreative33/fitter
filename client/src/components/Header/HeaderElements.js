@@ -16,7 +16,7 @@ export const Nav = styled.nav`
 export const NavLink = styled(Link)`
   color: #fff;
   display: flex;
-  align-items: right;
+  align-items: left;
   text-decoration: none;
   padding: 1 1rem;
   height: 100%;
