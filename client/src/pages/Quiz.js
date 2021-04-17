@@ -76,17 +76,37 @@ export default function Quiz() {
     
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
+
+const [showScore, setShowScore] = useState(false);
+
+
+
+const [score,setScore] = useState(0);
+    const handleAnswerButtonClick = (isCorrect) => {
+
+if(isCorrect === true ){
+    setScore(score + 1);
+}
+
+        const nextQuestion = currentQuestion +1;
+        if (nextQuestion < questions.length){
+            setCurrentQuestion(nextQuestion);
+        }
+        else{
+            setShowScore(true);
+        }
+        
+    }
     return (
 		<div className='app'>
-			{/* HINT: replace "false" with logic to display the 
-      score when the user has answered all the questions */}
-			{false ? (
-				<div className='score-section'>You scored 1 out of {questions.length}</div>
+			{}
+			{showScore ? (
+				<div className='score-section'>You scored {score} out of {questions.length}</div>
 			) : (
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
-							<span>Question 1</span>/{questions.length}
+							<span>Question {currentQuestion + 1}</span>/{questions.length}
 						</div>
 
                         
@@ -96,7 +116,7 @@ export default function Quiz() {
        
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) =>( 
-                        <button>{answerOption.answerText}</button>
+                        <button onClick={() =>handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
                         ))}
 						
 					</div>
