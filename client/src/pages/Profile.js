@@ -60,7 +60,7 @@ const Profile = () => {
 
                 <div className="m-2 p-2 mb-5 col-5 border-bottom border-success">
                     <h3 className="calendar-title text-center"> Your Goals</h3>
-                    <div className="calendar-input text-center">Goals Here!</div>
+                    <div className="calendar-input text-center">goals here!</div>
                 </div>
 
             </div>
