@@ -5,66 +5,38 @@ import '../Quiz.css'
 export default function Quiz() {
     const questions = [
         {
-            questionText: 'What is your main goal with Fitter?',
+            questionText: 'Did you meet you goal weight this week?',
             answerOptions:[
-                {answerText: 'To lose weight', isCorrect: true },
-                {answerText: 'To eat healthier meals', isCorrect: true},
-                {answerText: 'To be healthier overall', isCorrect: true},
-                {answerText: 'Other', isCorrect: true},
+                {answerText: 'Yes', isCorrect: true },
+                {answerText: 'No', isCorrect: false}
             ],
         },
         {
-            questionText: 'What is your height?',
+            questionText: 'Did you meet you weekly workout goal this week?',
             answerOptions:[
-                {answerText: '< 4 ft', isCorrect: true },
-                {answerText: '4-5 ft', isCorrect: true},
-                {answerText: '5-6ft', isCorrect: true},
-                {answerText: '> 6 ft', isCorrect: true},
+                {answerText: 'Yes', isCorrect: true },
+                {answerText: 'No', isCorrect: false}
             ],
         },
         {
-            questionText: 'How many times per week do you hope to work out?',
+            questionText: 'Did you follow you you dietary plan this week?',
             answerOptions:[
-                {answerText: 'I do not wish to workout at all', isCorrect: true },
-                {answerText: '1-2 times per week', isCorrect: true},
-                {answerText: '3-4 times per week', isCorrect: true},
-                {answerText: '5 times or more per week', isCorrect: true},
+                {answerText: 'Yes', isCorrect: true },
+                {answerText: 'No', isCorrect: false}
             ],
         },
         {
-            questionText: 'What is your ideal calorie intake per day?',
+            questionText: 'Did you meet your daily water intake goal?',
             answerOptions:[
-                {answerText: '< 1000 calories', isCorrect: true },
-                {answerText: '1200-1400 calories', isCorrect: true},
-                {answerText: '1800-2000 calories', isCorrect: true},
-                {answerText: '2200 or more calories', isCorrect: true},
+                {answerText: 'Yes', isCorrect: true },
+                {answerText: 'No', isCorrect: false}
             ],
         },
         {
-            questionText: 'what is your age?',
+            questionText: 'Did you meet your nightly sleep goal?',
             answerOptions:[
-                {answerText: '< 15', isCorrect: true },
-                {answerText:  '16-30', isCorrect: true},
-                {answerText: '31-50', isCorrect: true},
-                {answerText: '51 or older', isCorrect: true},
-            ],
-        },
-        {
-            questionText: 'What is your current weight?',
-            answerOptions:[
-                {answerText: '< 99 lbs', isCorrect: true },
-                {answerText:  '99-150 lbs', isCorrect: true},
-                {answerText: '151-200 lbs', isCorrect: true},
-                {answerText: '200 or more lbs', isCorrect: true},
-            ],
-        },
-        {
-            questionText: 'What is your goal weight?',
-            answerOptions:[
-                {answerText: '< 99 lbs', isCorrect: true },
-                {answerText:  '99-150 lbs', isCorrect: true},
-                {answerText: '151-200 lbs', isCorrect: true},
-                {answerText: '200 or more lbs', isCorrect: true},
+                {answerText: 'Yes', isCorrect: true },
+                {answerText: 'No', isCorrect: false}
             ],
         },
     ];
@@ -93,7 +65,7 @@ export default function Quiz() {
 		<div className="app quiz mt-5 container">
 			{}
 			{showScore ? (
-				<div className="score-section">You scored {score} out of {questions.length}</div>
+				<div className="score-section">You completed {score} out of {questions.length} goals this week!</div>
 			) : (
 				<>
                 <div className="row m-3">
