@@ -44,8 +44,8 @@ const Profile = () => {
 
   return (
 
-    <main className="body-card m-4 pb-1">
-        <div className="container mt-5 m-4">
+    <main className="container body-card m-4 pb-1">
+        <div className=" mt-5 m-4">
             <div className="row">
 
                 <div className="m-2 p-2 mb-5 col-5 border-bottom border-success">
@@ -56,17 +56,7 @@ const Profile = () => {
                         <div>{activity?.weekday}: {activity?.activityName}</div>
                     </div>
                     ))}
-                </div>
-
-                <div className="m-2 p-2 mb-5 col-5 border-bottom border-success">
-                    <h3 className="calendar-title text-center"> Your Goals</h3>
-                    <div className="calendar-input text-center">goals here!</div>
-                </div>
-
-            </div>
-
-            <h3 className="calendar-title"> Your Weekly Calendar</h3>
-            <form onSubmit={handleClick}>
+     <form className="col-5" onSubmit={handleClick}>
                 <div id="hour-11" className="row p-2 time-block">
                     <div className="col-8 m-1 day">
                         Sunday
@@ -137,9 +127,91 @@ const Profile = () => {
                     <button onClick={(event)=>handleClick(event)} data-weekday="Saturday" className="btn saveBtn
                         col-md-1"><i className="fas fa-save save-icon" data-weekday="Saturday"></i></button>
                 </div>
+</form>
+
+                </div>
+
+                <div className="m-2 p-2 mb-5 col-5 border-bottom border-success">
+                    <h3 className="calendar-title text-center"> Your Goals</h3>
+                    <div className="calendar-input text-center">goals here!</div>
+
+{/* Health questions */}
+<div className="row p-2">
+<form className="col-5">
+                <div id="hour-5" className="row p-2 time-block">
+                    <div className="col-8 m-1 day">
+                        Current Weight
+                    </div>
+                    <input id="textarea-currentWeight" onChange={(event)=> handleChange(event, "currentWeight")} className="col-10 calendar-input text11">
+                    </input>
+                    <button onClick={(event)=>handleClick(event)} data-weekday="currentWeight" className="btn saveBtn
+                        col-md-1"><i className="fas fa-save save-icon" data-weekday="currentWeight"></i></button>
+                </div>
+
+                <div id="hour-5" className="row p-2 time-block">
+                    <div className="col-8 m-1 day">
+                    Goal Weight
+                    </div>
+                    <input id="textarea-goalWeight" onChange={(event)=> handleChange(event, "goalWeight")} className="col-10 calendar-input text11">
+                    </input>
+                    <button onClick={(event)=>handleClick(event)} data-weekday="goalWeight" className="btn saveBtn
+                        col-md-1"><i className="fas fa-save save-icon" data-weekday="goalWeight"></i></button>
+                </div>
+
+                <div id="hour-5" className="row p-2 time-block">
+                    <div className="col-8 m-1 day">
+                    How many days do you plan on working out this week?
+                    </div>
+                    <input id="textarea-goalWorkout" onChange={(event)=> handleChange(event, "goalWorkout")} className="col-10 calendar-input text11">
+                    </input>
+                    <button onClick={(event)=>handleClick(event)} data-weekday="goalWorkout" className="btn saveBtn
+                        col-md-1"><i className="fas fa-save save-icon" data-weekday="goalWorkout"></i></button>
+                </div>
+
+                <div id="hour-5" className="row p-2 time-block">
+                    <div className="col-8 m-1 day">
+                    What's your dietary plan for this week?
+                    </div>
+                    <input id="textarea-diet" onChange={(event)=> handleChange(event, "diet")} className="col-10 calendar-input text11">
+                    </input>
+                    <button onClick={(event)=>handleClick(event)} data-weekday="diet" className="btn saveBtn
+                        col-md-1"><i className="fas fa-save save-icon" data-weekday="diet"></i></button>
+                </div>
+
+                <div id="hour-5" className="row p-2 time-block">
+                    <div className="col-8 m-1 day">
+                    How many hours of sleep do you plan on getting each night?
+                    </div>
+                    <input id="textarea-goalWorkout" onChange={(event)=> handleChange(event, "goalWorkout")} className="col-10 calendar-input text11">
+                    </input>
+                    <button onClick={(event)=>handleClick(event)} data-weekday="goalWorkout" className="btn saveBtn
+                        col-md-1"><i className="fas fa-save save-icon" data-weekday="goalWorkout"></i></button>
+                </div>
+
+                <div id="hour-5" className="row p-2 time-block">
+                    <div className="col-8 m-1 day">
+                   Do you plan on reducing your alcohol/drug/tobacco intake this week?
+                    </div>
+                    <input id="textarea-reduce" onChange={(event)=> handleChange(event, "reduce")} className="col-10 calendar-input text11">
+                    </input>
+                    <button onClick={(event)=>handleClick(event)} data-weekday="reduce" className="btn saveBtn
+                        col-md-1"><i className="fas fa-save save-icon" data-weekday="reduce"></i></button>
+                </div>
 
             </form>
         </div>
+
+                </div>
+
+            </div>
+                        <div className="row">
+            <h3 className="calendar-title"> Your Weekly Calendar</h3>
+
+            </div>
+
+       
+        </div>
+        
     </main>
   );
 };
