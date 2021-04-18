@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://gzalta96:lucy0927@cluster0.kubcb.mongodb.net/fitter', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitter', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
