@@ -2,28 +2,42 @@ import React, {useState} from 'react';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries';
 import { ADD_ACTIVITY } from '../utils/mutations';
+import { ADD_GOAL } from '../utils/mutations';
 import '../Profile.css'
 
 
 const Profile = () => {
   const { data: userData } = useQuery(QUERY_ME);
   const activities = userData?.me?.activities || [];
+  const goals = userData?.me?.goals || [];
+ 
  
     const [addActivity] = useMutation(ADD_ACTIVITY)
+    const [addGoal] = useMutation(ADD_GOAL)
 
     const [weekday, setWeekday] = useState('');
     const [activityName, setActivityName] = useState('');
 
-    // const [question,setQuestion] = useState('');
-    // const [ goalAnswer, setAnswer] = useState('');
+    const [question, setQuestion] = useState('');
+    const [ answer, setAnswer] = useState('');
 
     const handleChange = (event, dow) => {
       console.log(event.target.value);
       
       setWeekday(dow);
       setActivityName(event.target.value)
-  
+
+      setQuestion(dow);
+    setAnswer(event.target.value)
     };
+
+    const handleChange2 = (event, dow) => {
+        console.log(event.target.value);
+
+        setQuestion(dow);
+        setAnswer(event.target.value)
+      };
+    
 
     const handleClick = async event => {
 
@@ -31,56 +45,48 @@ const Profile = () => {
       console.log("addActivity");
       let weekday = event.target.getAttribute("data-weekday");
       let activityName = document.getElementById("textarea-" + weekday).value;
-    //   let goalQuestion = event.target.getAttribute("data-goal");
-    //   let goalAnswer = document.getElementById("textarea1-" + goalQuestion).value;
+
+    //   let question = event.target.getAttribute("data-goal");
+    //   let answer = document.getElementById("text-" + question).value;
+
       console.log(activityName);
         try {
             // add reaction to database
             await addActivity({
                 variables: { weekday, activityName }
             });
-        
             // clear form value 
             setWeekday(weekday);
             setActivityName('');
-            // setQuestion(goalQuestion);
-            // setAnswer('');
+
             window.location.reload(false);
         } catch (e) {
                 console.error(e);
         }
+
     };
 
+    const handleClick2 = async event => {
 
-
-
-    // const handleClick2 = async event => {
-
-    //     event.preventDefault();
+        event.preventDefault();
         
-    //     let question = event.target.getAttribute("data-weekday");
-    //     let goalAnswer = document.getElementById("textarea1-" + question).value;
-    //   //   let goalQuestion = event.target.getAttribute("data-goal");
-    //   //   let goalAnswer = document.getElementById("textarea1-" + goalQuestion).value;
+        let question = event.target.getAttribute("data-goal");
+        let answer = document.getElementById("text-" + question).value;
         
-    //       try {
-    //           // add reaction to database
-    //           await addActivity({
-    //               variables: { question, goalAnswer }
-    //           });
+          try {
+              // add reaction to database
+              await addGoal({
+                  variables: { question, answer }
+              });
           
-    //           // clear form value 
-    //           setQuestion(question);
-    //           setAnswer('');
-    //           // setQuestion(goalQuestion);
-    //           // setAnswer('');
-    //           window.location.reload(false);
-    //       } catch (e) {
-    //               console.error(e);
-    //       }
-    //   };
-
-
+              // clear form value 
+              setQuestion(question);
+              setAnswer('');
+              window.location.reload(false);
+          } catch (e) {
+                  console.error(e);
+          }
+      };
 
   return (
 
@@ -172,23 +178,23 @@ const Profile = () => {
             {/* Health questions */}
             <div className="m-2 p-2 mb-5 col">
                 <h3 className="calendar-title text-center"> Your Goals</h3>
-                {activities &&
-                activities.map(activity => (
+                {goals &&
+                goals.map(activity => (
                 <div key={activity._id} className="text4 text-center calendar-input">
-                    <div>{activity?.weekday}: {activity?.activityName}</div>
+                    <div>{activity?.question}: {activity?.answer}</div>
                 </div>
                 ))}
 
-                <form onSubmit={handleClick}>
+                <form onSubmit={handleClick2}>
                     <div className="mt-5 time-block">
                         <div className="m-1 day">
                             Current Weight
                         </div>
-                        <input id="textarea-currentWeight" onChange={(event)=> handleChange(event, "currentWeight")}
+                        <input id="text-currentWeight" onChange={(event)=> handleChange2(event, "currentWeight")}
                         className="calendar-input">
                         </input>
-                        <button onClick={(event)=>handleClick(event)} data-weekday="currentWeight" className="btn
-                            saveBtn"><i className="fas fa-save save-icon" data-weekday="currentWeight"></i></button>
+                        <button onClick={(event)=>handleClick2(event)} data-goal="currentWeight" className="btn
+                            saveBtn"><i className="fas fa-save save-icon" data-goal="currentWeight"></i></button>
                     </div>
 
                     <div className="time-block">

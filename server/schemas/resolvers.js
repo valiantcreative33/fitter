@@ -125,6 +125,20 @@ const resolvers = {
             }
           
             throw new AuthenticationError('You need to be logged in!');
+          },
+
+          addGoal: async (parent, { goalId, goal, goalName }, context) => {
+            if (context.user) {
+              const updatedUser = await User.findOneAndUpdate(
+                { _id: context.user._id },
+                { $addToSet: { goals: {goalId, goal, goalName} } },
+                { new: true }
+              ).populate('goals');
+          
+              return updatedUser;
+            }
+          
+            throw new AuthenticationError('You need to be logged in!');
           }
     }
 };

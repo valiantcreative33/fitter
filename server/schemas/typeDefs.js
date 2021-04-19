@@ -11,6 +11,7 @@ const typeDefs = gql`
         stories: [Story]
         friends: [User]
         activities: [Activity]
+        goals: [Goal]
     }
 
     type Story {
@@ -36,6 +37,13 @@ const typeDefs = gql`
         createdAt: String
     }
 
+    type Goal{
+        _id: ID
+        goal: String
+        goalName: String
+        createdAt: String
+    }
+
     type Auth {
         token: ID!
         user: User
@@ -56,6 +64,7 @@ const typeDefs = gql`
         addReaction(storyId: ID!, reactionBody: String!): Story
         addFriend(friendId: ID!): User
         addActivity( weekday: String!, activityName: String!): Activity
+        addGoal( goal: String!, goalName: String!): Goal
     }
     
 `;

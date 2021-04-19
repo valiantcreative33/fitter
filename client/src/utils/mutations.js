@@ -78,3 +78,14 @@ export const ADD_ACTIVITY = gql`
     }
   }
 `;
+
+export const ADD_GOAL = gql`
+  mutation addGoal( $goal: String!, $goalName: String!) {
+    addGoal( goal: $weekday, goalName: $goalName) {
+      _id
+      goal
+      goalName
+      createdAt
+    }
+  }
+`;
