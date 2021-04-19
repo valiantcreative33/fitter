@@ -31,4 +31,4 @@ This application is under the [ISC](https://opensource.org/licenses/ISC) license
 ![Screenshot 2021-04-15 214722](https://user-images.githubusercontent.com/65797801/115083616-a649a900-9ed5-11eb-8ba0-7e1027f32dd3.png)
 
 ## Contribution
-Made with 💪 by [Jessica Coneff](https://github.com/jconeff), [Dalton Morrel](https://github.com/Dmorrel7), [Ruben Matamoros](https://github.com/valiantcreative33), and [Gabriela Zalta](https://github.com/gabrielazalta).
+Made with 💪 by [Jessica Coneff](https://github.com/jconeff), [Reagan Joseph](https://github.com/reaganjoseph26), [Dalton Morrel](https://github.com/Dmorrel7), [Ruben Matamoros](https://github.com/valiantcreative33), and [Gabriela Zalta](https://github.com/gabrielazalta).
