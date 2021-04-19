@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 const activitySchema = require('./Activity');
+const goalSchema = require('./Goal');
 
 const userSchema = new Schema(
   {
@@ -35,6 +36,9 @@ const userSchema = new Schema(
     ],
     activities: [
       activitySchema
+    ],
+    goals: [
+      goalSchema
     ]
   },
   {

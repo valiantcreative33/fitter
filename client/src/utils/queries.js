@@ -81,6 +81,11 @@ export const QUERY_ME = gql`
         weekday
         activityName
       }
+      goals{
+        _id
+        goal
+        goalName
+      }
     }
   }
 `;
@@ -104,6 +109,15 @@ export const QUERY_ACTIVITIES = gql`
       _id
       weekday
       activityName
+    }
+  }
+`;
+export const QUERY_GOALS = gql`
+  query goals($username: String) {
+    goals(username: $username) {
+      _id
+      goal
+      goalName
     }
   }
 `;

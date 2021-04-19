@@ -1,5 +1,4 @@
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import {
   Nav,
@@ -20,7 +19,7 @@ const Header = () => {
     <>
       <Nav>
         <NavLink to="/" style={{backgroundColor: "#91c788"}}>
-          <img src={require('../../../src/assets/logo.svg')} alt="FITTER" height="75px" />
+          <img className="ml-3 mt-3 pt-3" src={require('../../../src/assets/logo.svg')} alt="FITTER" height="80px" />
         </NavLink>
         <Bars />
           <NavMenu>
@@ -29,7 +28,7 @@ const Header = () => {
                   <>
                     <NavLink className="nav-link mr-3" to="/profile" activeStyle>Profile</NavLink>
                       <a className="nav-link mr-3" href="/"  onClick={logout} activeStyle>Logout</a>
-                    <NavLink className="nav-link mr-3 pb-3" to="/quiz" activeStyle>Set up Your Health Goals!</NavLink>
+                    <NavLink className="nav-link mr-3 pb-3" to="/quiz" activeStyle>Weekely Goal Quiz</NavLink>
                   </>
                 ) : (
                   <>
