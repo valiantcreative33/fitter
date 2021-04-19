@@ -14,11 +14,30 @@ const Profile = () => {
     const [weekday, setWeekday] = useState('');
     const [activityName, setActivityName] = useState('');
 
+    // const [question,setQuestion] = useState('');
+    // const [ goalAnswer, setAnswer] = useState('');
+
     const handleChange = (event, dow) => {
       console.log(event.target.value);
+      
       setWeekday(dow);
       setActivityName(event.target.value)
+  
     };
+
+
+    // const handleChange2 = (event, dow) => {
+    //     console.log(event.target.value);
+        
+    //     setQuestion(dow);
+    //     setAnswer(event.target.value)
+    
+    //   };
+
+
+
+
+
 
     const handleClick = async event => {
 
@@ -26,6 +45,8 @@ const Profile = () => {
       console.log("addActivity");
       let weekday = event.target.getAttribute("data-weekday");
       let activityName = document.getElementById("textarea-" + weekday).value;
+    //   let goalQuestion = event.target.getAttribute("data-goal");
+    //   let goalAnswer = document.getElementById("textarea1-" + goalQuestion).value;
       console.log(activityName);
         try {
             // add reaction to database
@@ -36,11 +57,44 @@ const Profile = () => {
             // clear form value 
             setWeekday(weekday);
             setActivityName('');
+            // setQuestion(goalQuestion);
+            // setAnswer('');
             window.location.reload(false);
         } catch (e) {
                 console.error(e);
         }
     };
+
+
+
+
+    // const handleClick2 = async event => {
+
+    //     event.preventDefault();
+        
+    //     let question = event.target.getAttribute("data-weekday");
+    //     let goalAnswer = document.getElementById("textarea1-" + question).value;
+    //   //   let goalQuestion = event.target.getAttribute("data-goal");
+    //   //   let goalAnswer = document.getElementById("textarea1-" + goalQuestion).value;
+        
+    //       try {
+    //           // add reaction to database
+    //           await addActivity({
+    //               variables: { question, goalAnswer }
+    //           });
+          
+    //           // clear form value 
+    //           setQuestion(question);
+    //           setAnswer('');
+    //           // setQuestion(goalQuestion);
+    //           // setAnswer('');
+    //           window.location.reload(false);
+    //       } catch (e) {
+    //               console.error(e);
+    //       }
+    //   };
+
+
 
   return (
 
@@ -56,7 +110,7 @@ const Profile = () => {
                         <div>{activity?.weekday}: {activity?.activityName}</div>
                     </div>
                     ))}
-     <form className="col-5" onSubmit={handleClick}>
+     <form className="col-6" onSubmit={handleClick}>
                 <div id="hour-11" className="row p-2 time-block">
                     <div className="col-8 m-1 day">
                         Sunday
@@ -133,16 +187,21 @@ const Profile = () => {
 
                 <div className="m-2 p-2 mb-5 col-5 border-bottom border-success">
                     <h3 className="calendar-title text-center"> Your Goals</h3>
-                    <div className="calendar-input text-center">goals here!</div>
+                    {activities &&
+                    activities.map(activity => (
+                    <div key={activity._id} className="col-md-10 text4 text-center calendar-input">
+                        <div>{activity?.weekday}: {activity?.activityName}</div>
+                    </div>
+                    ))}
 
 {/* Health questions */}
 <div className="row p-2">
-<form className="col-5">
+<form className="col-6">
                 <div id="hour-5" className="row p-2 time-block">
                     <div className="col-8 m-1 day">
                         Current Weight
                     </div>
-                    <input id="textarea-currentWeight" onChange={(event)=> handleChange(event, "currentWeight")} className="col-10 calendar-input text11">
+                    <input id="textarea1-currentWeight" onChange={(event)=> handleChange(event, "currentWeight")} className="col-10 calendar-input text11">
                     </input>
                     <button onClick={(event)=>handleClick(event)} data-weekday="currentWeight" className="btn saveBtn
                         col-md-1"><i className="fas fa-save save-icon" data-weekday="currentWeight"></i></button>
@@ -204,10 +263,7 @@ const Profile = () => {
                 </div>
 
             </div>
-                        <div className="row">
-            <h3 className="calendar-title"> Your Weekly Calendar</h3>
-
-            </div>
+                       
 
        
         </div>
