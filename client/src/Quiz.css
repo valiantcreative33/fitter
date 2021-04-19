@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
+
+.quiz {
+    width: 75%;
+    background-color: #91c7885b;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+.back {
+    font-size: 22px;
+}
+.back:hover {
+    color: black;
+    background-color: #fdefc4;
+}
+
+.result-text {
+    font-size: 22px;
+    font-family: 'Tajawal', sans-serif;
+    text-decoration: none;
+}
+
+.fa-long-arrow-alt-left {
+    padding: 10px;
+    font-size: 26px;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    color: #52734d;
+}
+
+.fa-long-arrow-alt-left:hover {
+    text-decoration: none;
+}
+
+.answerBtn {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 20px;
+    color: #435e3f;
+    margin: 20px;
+    background-color: #e9f7e7d2; 
+    font-weight: bold;
+}
+.answerBtn:hover {
+    font-size: 21px;
+}
+
+.question-section{
+    font-family: 'Tajawal', sans-serif !important;
+    font-weight: normal;
+    font-size: 23px;
+    margin: 10px;
+}
+
+.score-section {
+    font-family: 'Tajawal', sans-serif !important;
+    font-weight: normal;
+    font-size: 23px;
+    margin: 10px;
+}
+
+.question-text {
+    font-weight: bold;
+}
+
+
+
+
+

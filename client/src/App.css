@@ -1,38 +1,172 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
+
+.header-title {
+  font-size: 52px;
+  font-family: 'Montserrat', sans-serif;
+}
+.header-title:hover {
+  color: rgba(0, 0, 0, 0.548);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  text-decoration-line: none;
+}
+.nLink {
+  font-weight:bold;
+  color: black !important;
+  font-size: 23px !important;
+  text-align:right;
+}
+
+.nav-items {
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.nav-link {
+  font-size: 21px;
+}
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.164) ;
+  border-radius: 10px;
+}
+
+.landing-page {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.body-text {
+  font-size: 22px;
+  font-family: 'Tajawal', sans-serif;
+  text-decoration: none;
+}
+.body-title {
+  font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.text-hover:hover {
+  color: #52734d;
+}
+.login {
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+}
+.login-text {
+  font-size: 22px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.intro-text {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 24px;
+  background-color: #fbefcc63;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.btn:hover {
+  font-size: 16px;
+  background-color: #91c7885b;
+  color: grey;
+}
+
+.img-fluid {
+  background-color: #fbefcc63;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.small-card {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 22px;
+  font-weight: bolder;
+  border-radius: 10px;
+  background-color: #fbefccc9;
+  padding: 5px;
+  letter-spacing: 2.6px;
+}
+
+.body-card {
+  background: #91c7885b;
+}
+
+
+.story-input {
+  font-size: 16px;
+}
+
+/* profile css */
+
+.new-line {
+  white-space: pre-line;
+}
+
+.save-icon {
+  padding: 6px;
+  font-size: 18px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-decoration: none;
+  border-radius: 20%;
+  background: #91c788;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.save-icon:hover {
+  background-color: #52734d;
+  text-decoration: none;
+  color: #ddffbc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.saveBtn:hover {
+  background-color: unset !important;
+  color: unset !important;
 }
+
+.calendar-input {
+  font-size: 20px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.day {
+  font-size: 22px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.calendar-title {
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+  color: #15350f;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 30px;
+}
+
+.footer-text {
+  font-size: 18px;
+}
+
+.footerI:hover {
+  color: #32ac1c;
+}
+
+.reaction-form {
+  font-size: 20px;
+}
+
+.reaction-story {
+  font-size: 16px;
+}
+
+.btn-outline-success{
+  font-size: 16px;
+}
+
+
+
+

@@ -1,0 +1,40 @@
+.new-line {
+  white-space: pre-line;
+}
+
+.fas {
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20%;
+  background: #91c788;
+  color: white;
+}
+
+.fas:hover {
+  background-color: #52734d;
+  text-decoration: none;
+  color: #ddffbc;
+}
+
+.saveBtn:hover {
+  background-color: unset !important;
+  color: unset !important;
+}
+
+.calendar-input {
+  font-size: 20px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.day {
+  font-size: 22px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.calendar-title {
+  font-size: 42px;
+  font-family: 'Montserrat', sans-serif;
+  }
+
