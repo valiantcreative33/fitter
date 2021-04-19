@@ -24,14 +24,14 @@ const SingleStory = props => {
   return (
     <div className="m-4 p-3 body-card">
       <div className="card mb-3">
-        <p className="card-header">
-          <span style={{ fontWeight: 700 }} className="text-light">
+        <p className="reaction-story card-header">
+          <span style={{ fontWeight: 700 }} className="reaction-story text-light">
             {story.username}
           </span>{' '}
           story on {story.createdAt}
         </p>
-        <div className="card-body">
-          <p>{story.storyText}</p>
+        <div className="reaction-story card-body">
+          <p className="reaction-story">{story.storyText}</p>
         </div>
       </div>
 

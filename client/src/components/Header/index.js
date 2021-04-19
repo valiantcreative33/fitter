@@ -27,9 +27,9 @@ const Header = () => {
               <div>
                 {Auth.loggedIn() ? (
                   <>
-                    <NavLink className="nav-link" to="/profile" activeStyle>Profile</NavLink>
-                      <a className="nav-link" href="/"  onClick={logout} activeStyle>Logout</a>
-                    <NavLink className="nav-link" to="/quiz" activeStyle>Set up Your Health Goals!</NavLink>
+                    <NavLink className="nav-link mr-3" to="/profile" activeStyle>Profile</NavLink>
+                      <a className="nav-link mr-3" href="/"  onClick={logout} activeStyle>Logout</a>
+                    <NavLink className="nav-link mr-3 pb-3" to="/quiz" activeStyle>Set up Your Health Goals!</NavLink>
                   </>
                 ) : (
                   <>

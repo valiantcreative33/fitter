@@ -36,11 +36,11 @@ const ReactionForm = ({ storyId }) => {
 
   return (
     <div>
-      <form className="flex-row justify-center justify-space-between-md align-stretch" onSubmit={handleFormSubmit}>
+      <form className="flex-row" onSubmit={handleFormSubmit}>
         <textarea
           placeholder="Leave a reaction to this story..."
           value={reactionBody}
-          className="form-input col-12 col-md-9"
+          className="reaction-form story-input col-12 col-md-9"
           onChange={handleChange}
         ></textarea>
         <div className="col-12">
