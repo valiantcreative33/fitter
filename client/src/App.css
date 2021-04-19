@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
-@import "~bootstrap/scss/bootstrap";
 
 
 .header-title {
@@ -70,7 +69,7 @@
 }
 
 .btn:hover {
-  font-size: 20px;
+  font-size: 16px;
   background-color: #91c7885b;
   color: grey;
 }
@@ -98,6 +97,10 @@
 story-text {
   color: black;
   text-decoration: none;
+}
+
+.story-input {
+  font-size: 16px;
 }
 
 /* profile css */
@@ -143,7 +146,16 @@ story-text {
 }
 
 .footer {
-  color: #91c788;
+  color: #15350f;
   font-family: 'Tajawal', sans-serif;
-  font-size: 32px;
+  font-size: 30px;
 }
+
+.footer-text {
+  font-size: 18px;
+}
+
+.footerI:hover {
+  color: #32ac1c;
+}
+

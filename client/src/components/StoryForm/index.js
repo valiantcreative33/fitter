@@ -58,11 +58,11 @@ const StoryForm = () => {
 
   return (
     <div >
-      <form className="row flex-row justify-center justify-space-between-md align-stretch m-3 p-3" onSubmit={handleFormSubmit}>
+      <form className="row flex-row m-3 p-3" onSubmit={handleFormSubmit}>
       <textarea
         placeholder="Share your story"
         value={storyText}
-        className="form-input col-12 col-md-9"
+        className="story-input col-12 col-md-9"
         onChange={handleChange}
         ></textarea>
         <div className="col-12">
