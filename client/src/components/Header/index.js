@@ -28,7 +28,7 @@ const Header = () => {
                   <>
                     <NavLink className="nav-link mr-3" to="/profile" activeStyle>Profile</NavLink>
                       <a className="nav-link mr-3" href="/"  onClick={logout} activeStyle>Logout</a>
-                    <NavLink className="nav-link mr-3 pb-3" to="/quiz" activeStyle>Set up Your Health Goals!</NavLink>
+                    <NavLink className="nav-link mr-3 pb-3" to="/quiz" activeStyle>Weekely Goal Quiz</NavLink>
                   </>
                 ) : (
                   <>
