@@ -63,7 +63,6 @@ const Profile = () => {
         } catch (e) {
                 console.error(e);
         }
-
     };
 
     const handleClick2 = async event => {
@@ -78,7 +77,6 @@ const Profile = () => {
               await addGoal({
                   variables: { question, answer }
               });
-          
               // clear form value 
               setQuestion(question);
               setAnswer('');
@@ -179,9 +177,9 @@ const Profile = () => {
             <div className="m-2 p-2 mb-5 col">
                 <h3 className="calendar-title text-center"> Your Goals</h3>
                 {goals &&
-                goals.map(activity => (
-                <div key={activity._id} className="text4 text-center calendar-input">
-                    <div>{activity?.question}: {activity?.answer}</div>
+                goals.map(goal => (
+                <div key={goal._id} className="text4 text-center calendar-input">
+                    <div>{goal?.question}: {goal?.answer}</div>
                 </div>
                 ))}
 

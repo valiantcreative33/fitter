@@ -52,7 +52,7 @@ const Login = (props) => {
                 onChange={handleChange}
               />
               <input
-                className='form-input'
+                className='form-input login-text'
                 placeholder='******'
                 name='password'
                 type='password'

@@ -26,15 +26,15 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  /* font-family: 'Montserrat', sans-serif;
+  font-weight: 400; */
   line-height: 1.5;
-  font-size: 20px;
+  /* font-size: 20px;
   color: var(--dark);
-  background-color: #f3fffee1;
-}
+  background-color: #f3fffee1; */
+} 
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -44,7 +44,7 @@ h6 {
   font-weight: 700;
   margin: 5px 0;
   line-height: 1.25;
-}
+} */
 
 h1 {
   font-size: 2.25rem;
@@ -76,7 +76,7 @@ p {
 }
 
 a {
-  color: var(--dark);
+  /* color: var(--dark); */
   text-decoration: none;
 }
 
@@ -107,7 +107,7 @@ nav a:hover {
   font-size: 2.5rem;
 }
 
-.btn,
+/* .btn,
 .pill {
   font-size: 1.3rem;
   text-decoration: none;
@@ -120,31 +120,31 @@ nav a:hover {
   background-color: var(--secondary);
   transition: all 0.5s;
   max-width: 100%;
-}
+} */
 
-.btn:hover,
+/* .btn:hover,
 .pill:hover {
   color: var(--secondary);
   background-color: var(--dark);
-}
+} */
 
-.btn-inline {
+/* .btn-inline {
   display: inline;
-}
+} */
 
 /* CARDS */
-.card {
+/* .card {
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   background-color: var(--light);
   color: var(--dark);
-}
+} */
 
 .card-header {
-  color: var(--secondary);
+  /* color: var(--secondary); */
   margin: 0;
-  background-color: var(--dark);
+  /* background-color: var(--dark); */
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
@@ -162,7 +162,7 @@ nav a:hover {
 }
 
 .form-label {
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   margin: 0.625rem 0 0.25rem;
 }
 
@@ -171,8 +171,8 @@ nav a:hover {
   padding: 0.75rem;
   margin: 0.2rem 0;
   font-size: 1.2rem;
-  border: 2px solid var(--dark);
-  border-radius: var(--border-radius);
+  /* border: 2px solid var(--dark);
+  border-radius: var(--border-radius); */
 }
 
 [type='radio']:checked,
@@ -239,7 +239,7 @@ nav a:hover {
 
 .container-fluid {
   width: 100%;
-}
+} */
 
 /* DISPLAY */
 .display-none {
@@ -777,7 +777,7 @@ nav a:hover {
 }
 
 /* BACKGROUND UTILS */
-.bg-primary {
+/* .bg-primary {
   background-color: var(--primary);
 }
 
@@ -795,7 +795,7 @@ nav a:hover {
 
 .bg-dark {
   background-color: var(--dark);
-}
+} */
 
 /* FLEX CONTENT */
 .flex-row {
