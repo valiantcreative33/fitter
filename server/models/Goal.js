@@ -6,7 +6,7 @@ const goalSchema = new Schema(
     goal: {
       type: String,
       required: true,
-      maxlength: 9
+      maxlength: 250
     },
     goalName: {
       type: String,

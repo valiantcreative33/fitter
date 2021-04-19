@@ -27,7 +27,7 @@ This application is under the [ISC](https://opensource.org/licenses/ISC) license
 
 ## Website & Screenshot
 
-[Deploy Here](https://frozen-ravine-95295.herokuapp.com/profile)
+[Deploy Here](https://frozen-ravine-95295.herokuapp.com/)
 ![Screenshot 2021-04-15 214722](https://user-images.githubusercontent.com/65797801/115083616-a649a900-9ed5-11eb-8ba0-7e1027f32dd3.png)
 
 ## Contribution
