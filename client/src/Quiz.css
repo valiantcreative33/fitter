@@ -35,10 +35,12 @@
 }
 
 .answerBtn {
-    font-size: 16px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 20px;
     color: #435e3f;
     margin: 20px;
     background-color: #e9f7e7d2; 
+    font-weight: bold;
 }
 .answerBtn:hover {
     font-size: 17px;
@@ -57,6 +59,11 @@
     font-size: 23px;
     margin: 10px;
 }
+
+.question-text {
+    font-weight: bold;
+}
+
 
 
 

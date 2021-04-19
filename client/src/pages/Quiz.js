@@ -70,12 +70,12 @@ export default function Quiz() {
 				<>
                 <div className="row m-3">
 					<div className="col-12 question-section">
-						<div className="question-count">
+						<div className="question-count text-center">
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
 						</div>
 
                         
-						<div className="question-text">{questions[currentQuestion].questionText}</div>
+						<div className="question-text text-center">{questions[currentQuestion].questionText}</div>
 					</div>
 
        
@@ -83,7 +83,7 @@ export default function Quiz() {
 						{questions[currentQuestion].answerOptions.map((answerOption) =>( 
                         <button 
                         style={{ marginLeft: "auto" }}
-                        className="answerBtn btn btn-outline-success btn-lg" 
+                        className="answerBtn btn btn-outline-success quiz-button btn-block btn-lg" 
                         onClick={() =>handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}
                         </button>
                         ))}
