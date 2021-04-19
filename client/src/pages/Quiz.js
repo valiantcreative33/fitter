@@ -65,7 +65,7 @@ export default function Quiz() {
 		<div className="app quiz mt-5 container">
 			{}
 			{showScore ? (
-				<div className="score-section">You completed {score} out of {questions.length} goals this week!</div>
+				<div className="score-section text-center">You completed {score} out of {questions.length} goals this week!</div>
 			) : (
 				<>
                 <div className="row m-3">
