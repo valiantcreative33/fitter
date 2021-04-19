@@ -26,7 +26,7 @@ const Home = () => {
         <div>
           <LandingPage />
         </div>
-        <div className="flex-column justify-space-between body-card m-4 p-4">
+        <div className="flex-column justify-space-between body-card m-12 p-4">
         {loggedIn && (
           <div className="col-12 mb-3">
             <StoryForm />
