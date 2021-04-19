@@ -59,7 +59,7 @@ const Profile = () => {
             setWeekday(weekday);
             setActivityName('');
 
-            window.location.reload(false);
+            window.location.reload();
         } catch (e) {
                 console.error(e);
         }
