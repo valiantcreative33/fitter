@@ -59,7 +59,7 @@ const Profile = () => {
             setWeekday(weekday);
             setActivityName('');
 
-            location.reload();
+            windows.location.reload();
         } catch (e) {
                 console.error(e);
         }
@@ -81,7 +81,7 @@ const Profile = () => {
               setQuestion(goal);
               setAnswer('');
 
-              location.reload();
+              windows.location.reload();
           } catch (e) {
                   console.error(e);
           }
