@@ -11,9 +11,7 @@ import SingleStory from './pages/singleStory';
 import Profile from './pages/Profile';
 import Signup from './pages/SignupForm';
 import Footer from './components/Footer';
-// import LandingPage from './components/LandingPage';
-
-
+import './App.scss';
 import './App.css';
 import Quiz from './pages/Quiz';
 import LandingPage from './components/LandingPage';
