@@ -60,6 +60,7 @@ const Profile = () => {
             setActivityName('');
 
             window.location.href = window.location.href
+
         } catch (e) {
                 console.error(e);
         }
@@ -69,16 +70,16 @@ const Profile = () => {
 
         event.preventDefault();
         
-        let question = event.target.getAttribute("data-goal");
-        let answer = document.getElementById("text-" + question).value;
+        let goal = event.target.getAttribute("data-goal");
+        let goalName = document.getElementById("text-" + question).value;
         
           try {
               // add reaction to database
               await addGoal({
-                  variables: { question, answer }
+                  variables: { goal, goalName }
               });
               // clear form value 
-              setQuestion(question);
+              setQuestion(goal);
               setAnswer('');
               window.location.reload(false);
           } catch (e) {
@@ -179,70 +180,70 @@ const Profile = () => {
                 {goals &&
                 goals.map(goal => (
                 <div key={goal._id} className="text4 text-center calendar-input">
-                    <div>{goal?.question}: {goal?.answer}</div>
+                    <div>{goal?.goal}: {goal?.goalName}</div>
                 </div>
                 ))}
 
                 <form onSubmit={handleClick2}>
                     <div className="mt-5 time-block">
                         <div className="m-1 day">
-                            Current Weight
+                            1. Current Weight
                         </div>
-                        <input id="text-currentWeight" onChange={(event)=> handleChange2(event, "currentWeight")}
+                        <input id="text-Question-1" onChange={(event)=> handleChange2(event, "Question-1")}
                         className="calendar-input">
                         </input>
-                        <button onClick={(event)=>handleClick2(event)} data-goal="currentWeight" className="btn
-                            saveBtn"><i className="fas fa-save save-icon" data-goal="currentWeight"></i></button>
+                        <button onClick={(event)=>handleClick2(event)} data-goal="Question-1" className="btn
+                            saveBtn"><i className="fas fa-save save-icon" data-goal="Question-1"></i></button>
                     </div>
 
                     <div className="time-block">
                         <div className="m-1 day">
-                            Goal Weight
+                            2. Goal Weight
                         </div>
-                        <input id="textarea-goalWeight" onChange={(event)=> handleChange(event, "goalWeight")}
+                        <input id="text-Question-2" onChange={(event)=> handleChange2(event, "Question-2")}
                         className="calendar-input">
                         </input>
-                        <button onClick={(event)=>handleClick(event)} data-weekday="goalWeight" className="btn saveBtn"><i className="fas fa-save save-icon" data-weekday="goalWeight"></i></button>
+                        <button onClick={(event)=>handleClick2(event)} data-goal="Question-2" className="btn saveBtn"><i className="fas fa-save save-icon" data-goal="Question-2"></i></button>
                     </div>
 
                     <div className="time-block">
                         <div className="m-1 day">
-                            How many days do you plan on working out this week?
+                            3. How many days do you plan on working out this week?
                         </div>
-                        <input id="textarea-goalWorkout" onChange={(event)=> handleChange(event, "goalWorkout")}
+                        <input id="text-Question-3" onChange={(event)=> handleChange2(event, "Question-3")}
                         className="calendar-input">
                         </input>
-                        <button onClick={(event)=>handleClick(event)} data-weekday="goalWorkout" className="btn saveBtn"><i className="fas fa-save save-icon" data-weekday="goalWorkout"></i></button>
+                        <button onClick={(event)=>handleClick2(event)} data-goal="Question-3" className="btn saveBtn"><i className="fas fa-save save-icon" data-goal="Question-3"></i></button>
                     </div>
 
                     <div className="time-block">
                         <div className="m-1 day">
-                            What's your dietary plan for this week?
+                            4. What's your dietary plan for this week?
                         </div>
-                        <input id="textarea-diet" onChange={(event)=> handleChange(event, "diet")} className="
+                        <input id="text-Question-4" onChange={(event)=> handleChange2(event, "Question-4")} className="
                         calendar-input">
                         </input>
-                        <button onClick={(event)=>handleClick(event)} data-weekday="diet" className="btn saveBtn"><i className="fas fa-save save-icon" data-weekday="diet"></i></button>
+                        <button onClick={(event)=>handleClick2(event)} data-goal="Question-4" className="btn saveBtn"><i className="fas fa-save save-icon" data-goal="Question-4"></i></button>
                     </div>
 
                     <div className="time-block">
                         <div className="m-1 day">
-                            How many hours of sleep do you plan on getting each night?
+                            5. How many hours of sleep do you plan on getting each night?
                         </div>
-                        <input id="textarea-goalWorkout" onChange={(event)=> handleChange(event, "goalWorkout")}
+                        <input id="text-Question-5" onChange={(event)=> handleChange2(event, "Question-5")}
                         className="calendar-input">
                         </input>
-                        <button onClick={(event)=>handleClick(event)} data-weekday="goalWorkout" className="btn saveBtn"><i className="fas fa-save save-icon" data-weekday="goalWorkout"></i></button>
+                        <button onClick={(event)=>handleClick2(event)} data-goal="Question-5" className="btn saveBtn"><i className="fas fa-save save-icon" data-goal="Question-5"></i></button>
                     </div>
 
                     <div className="time-block">
                         <div className="m-1 day">
-                            Do you plan on reducing your alcohol/drug/tobacco intake this week?
+                            6. Do you plan on reducing your alcohol/drug/tobacco intake this week?
                         </div>
-                        <input id="textarea-reduce" onChange={(event)=> handleChange(event, "reduce")} className="
+                        <input id="text-Question-6" onChange={(event)=> handleChange2(event, "Question-6")} className="
                         calendar-input">
                         </input>
-                        <button onClick={(event)=>handleClick(event)} data-weekday="reduce" className="btn saveBtn"><i className="fas fa-save save-icon" data-weekday="reduce"></i></button>
+                        <button onClick={(event)=>handleClick2(event)} data-goal="Question-6" className="btn saveBtn"><i className="fas fa-save save-icon" data-goal="Question-6"></i></button>
                     </div>
                 </form>
             </div>
