@@ -19,7 +19,7 @@ const Header = () => {
     <>
       <Nav>
         <NavLink to="/" style={{backgroundColor: "#91c788"}}>
-          <img src={require('../../../src/assets/logo.svg')} alt="FITTER" height="75px" />
+          <img className="ml-3 mt-3 pt-3" src={require('../../../src/assets/logo.svg')} alt="FITTER" height="80px" />
         </NavLink>
         <Bars />
           <NavMenu>

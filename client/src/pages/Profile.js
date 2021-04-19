@@ -41,7 +41,6 @@ const Profile = () => {
 
     const handleClick = async event => {
 
-      event.preventDefault();
       console.log("addActivity");
       let weekday = event.target.getAttribute("data-weekday");
       let activityName = document.getElementById("textarea-" + weekday).value;
@@ -59,15 +58,12 @@ const Profile = () => {
             setWeekday(weekday);
             setActivityName('');
 
-            window.location.reload();
         } catch (e) {
                 console.error(e);
         }
     };
 
     const handleClick2 = async event => {
-
-        event.preventDefault();
         
         let goal = event.target.getAttribute("data-goal");
         let goalName = document.getElementById("text-" + question).value;
@@ -81,7 +77,6 @@ const Profile = () => {
               setQuestion(goal);
               setAnswer('');
 
-              window.location.reload();
           } catch (e) {
                   console.error(e);
           }
